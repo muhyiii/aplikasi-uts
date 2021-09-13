@@ -6,8 +6,7 @@ class Home extends StatelessWidget {
     return SafeArea(
       child: Scaffold(
       body: Column(children: [
-        Text('Contoh'),
-        Text('baru')
+        
       ],),
         
       ),
