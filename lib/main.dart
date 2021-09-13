@@ -1,4 +1,5 @@
 
+import 'package:aplikasi_uts/home.dart';
 import 'package:aplikasi_uts/tampilan/tampilan_surat.dart';
 import 'package:flutter/material.dart';
 
@@ -15,7 +16,7 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       title: "Qur'an Care",
       theme: ThemeData(primarySwatch: Colors.green),
-      home: TampilanSurat(),
+      home: Home(),
       
     );
   }
