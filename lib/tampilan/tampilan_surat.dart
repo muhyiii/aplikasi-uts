@@ -1,63 +1,101 @@
+import 'package:aplikasi_uts/data-json/alquran.dart';
+import 'package:aplikasi_uts/tampilan/tampilan_ayat.dart';
 import 'package:flutter/material.dart';
 
 class TampilanSurat extends StatelessWidget {
+  
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       body: SafeArea(
+        child: Padding(
+          padding: const EdgeInsets.all(8.0),
           child: Container(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-          children: [
-            Container(
-              decoration: BoxDecoration(
-                  gradient: LinearGradient(
-                begin: Alignment.topCenter,
-                end: Alignment.bottomCenter,
-                colors: [
-                  Colors.green.shade800,
-                  Colors.green.shade400,
-                ],
-              )),
-              height: 80,
-              child: Padding(
-                padding: const EdgeInsets.symmetric(horizontal: 40),
-                child: Row(
-                  crossAxisAlignment: CrossAxisAlignment.center,
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-                    Icon(
-                      Icons.arrow_back,
-                      color: Colors.white,
-                      size: 40,
-                    ),
-                    Text(
-                      "Al-Qur'an Al-Karim",
-                      style: TextStyle(
-                        fontSize: 40,
-                        color: Colors.white,
-                        shadows: [
-                          Shadow(
-                            blurRadius: 10.0,
-                            color: Colors.black,
-                            offset: Offset(5.0, 5.0),
+            child: Container(
+              color: Colors.white,
+              child: ListView.builder(
+                itemCount: dataAlQuran.length,
+                itemBuilder: (context, index) {
+                  final AlQuran place = dataAlQuran[index];
+                  return InkWell(
+                      onTap: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                            builder: (context) {
+                              return TampilanAyat(
+                               
+                              );
+                            },
                           ),
-                        ],
-                      ),
-                    ),
-                    Icon(
-                      Icons.search,
-                      color: Colors.white,
-                      size: 40,
-                    ),
-                  ],
-                ),
+                        );
+                      },
+                      child: Padding(
+                        padding: const EdgeInsets.all(8.0),
+                        child: Container(
+                          decoration: BoxDecoration(
+                              color: Colors.black87,
+                              border: Border.all(width: 1, color: Colors.grey),
+                              borderRadius: BorderRadius.circular(20)),
+                          child: Padding(
+                            padding: EdgeInsets.only(left: 30, right: 20),
+                            child: Row(
+                              children: [
+                                Expanded(
+                                    flex: 1,
+                                    child: Text(
+                                      "${place.id}",
+                                      style: TextStyle(
+                                          fontSize: 30, color: Colors.white),
+                                    )),
+                                Expanded(
+                                  flex: 5,
+                                  child: Column(
+                                    crossAxisAlignment: CrossAxisAlignment.start,
+                                    mainAxisAlignment:
+                                        MainAxisAlignment.spaceEvenly,
+                                    children: [
+                                      Text(
+                                        place.surat_name,
+                                        style: TextStyle(
+                                            fontSize: 40, color: Colors.white),
+                                      ),
+                                      Text(
+                                        "${place.surat_terjemahan} - ${place.count_ayat} Ayat",
+                                        style: TextStyle(
+                                            fontSize: 20, color: Colors.white),
+                                      ),
+                                      
+                                    ],
+                                  ),
+                                ),
+                                Expanded(
+                                  flex: 3,
+                                  child: Text(
+                                    place.surat_text,
+                                    textAlign: TextAlign.right,
+                                    style: TextStyle(
+                                        fontSize: 50, color: Colors.white),
+                                  ),
+                                )
+                              ],
+                            ),
+                          ),
+                        ),
+                      ));
+                },
               ),
             ),
-            Container(
-              color: Colors.black,
-              
-              // BottomNavigationBar(
+          ),
+        ),
+      ),
+    );
+  }
+}
+
+
+
+ // BottomNavigationBar(
                 
               //   type: BottomNavigationBarType.fixed,
               //   backgroundColor: Color(0xFF6200EE),
@@ -89,10 +127,3 @@ class TampilanSurat extends StatelessWidget {
               //     ),
               //   ],
               // ),
-            ),
-          ],
-        ),
-      )),
-    );
-  }
-}
