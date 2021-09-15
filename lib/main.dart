@@ -1,6 +1,8 @@
 
 import 'package:aplikasi_uts/tampilan/tampilan_surat.dart';
+import 'package:aplikasi_uts/widget/background-image.dart';
 import 'package:flutter/material.dart';
+import 'home.dart';
 
 void main() {
   runApp(MyApp());
@@ -15,7 +17,7 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       title: "Qur'an Care",
       theme: ThemeData(primarySwatch: Colors.green),
-      home: TampilanSurat(),
+      home: Home(),
       
     );
   }
