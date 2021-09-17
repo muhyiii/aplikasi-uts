@@ -7,7 +7,7 @@ class BackgroundImage extends StatelessWidget {
   Widget build(BuildContext context) {
     return ShaderMask(
       shaderCallback: (bounds) => LinearGradient(
-        colors: [Colors.black, Colors.black12],
+        colors: [Colors.black54, Colors.black12],
         begin: Alignment.bottomCenter,
         end: Alignment.center,
       ).createShader(bounds),blendMode: BlendMode.darken,
@@ -16,8 +16,7 @@ class BackgroundImage extends StatelessWidget {
             image: DecorationImage(
                 image: AssetImage("image/uts.png"),
                 fit: BoxFit.cover,
-                colorFilter:
-                    ColorFilter.mode(Colors.black26, BlendMode.darken))),
+                )),
       ),
     );
   }

@@ -83,6 +83,12 @@ flutter:
         - asset: font/Righteous-Regular.ttf
           weight: 700
 
+    - family: Lobster       
+      fonts:
+        - asset: font/Lobster-Regular.ttf
+          weight: 700
+
+
 
   #
   # For details regarding fonts from package dependencies,

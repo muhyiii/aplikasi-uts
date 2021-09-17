@@ -52,7 +52,14 @@ class Home extends StatelessWidget {
                       crossAxisAlignment: CrossAxisAlignment.center,
                       children: [
                         const Card(
-                          elevation: 8,
+                          shape: RoundedRectangleBorder(
+                              borderRadius: BorderRadius.only(
+                            bottomRight: Radius.circular(10),
+                            topRight: Radius.circular(10),
+                            bottomLeft: Radius.circular(10),
+                            topLeft: Radius.circular(10),
+                          )),
+                          elevation: 5,
                           color: Colors.black12,
                           child: Padding(
                             padding: EdgeInsets.all(25),
@@ -72,13 +79,18 @@ class Home extends StatelessWidget {
                           height: 60.0,
                         ),
                         Container(
+                          
                           decoration: BoxDecoration(
+                            
                               color: Colors.greenAccent,
                               borderRadius: BorderRadius.circular(16)),
                           child: RaisedButton(
                             elevation: 5,
                             onPressed: () {
-                              Menu();
+                              Navigator.push(context,
+                                  MaterialPageRoute(builder: (context) {
+                                return Menu();
+                              }));
                             },
                             color: Colors.green[900],
                             child: Padding(

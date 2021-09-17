@@ -2,8 +2,7 @@ import 'dart:io';
 import 'package:aplikasi_uts/palatte.dart';
 
 import './widget/widget.dart';
-
-import 'package:aplikasi_uts/widget/background-image.dart';
+import 'package:aplikasi_uts/widget/backgrund_image.dart';
 import 'package:flutter/material.dart';
 
 class Menu extends StatelessWidget {
@@ -12,31 +11,31 @@ class Menu extends StatelessWidget {
     return SafeArea(
       child: Stack(
         children: [
-          BackgroundImage(),
+          BackgroundImageM(),
           Scaffold(
             backgroundColor: Colors.transparent,
             body: SafeArea(
               child: Column(
                 children: [
                   SizedBox(
-                    height: 100,
+                    height: 40,
                   ),
                   Container(
                     height: 180,
                     child: Center(
                       child: Text(
-                        "Qur'an Care",
+                        "Menu",
                         textDirection: TextDirection.ltr,
                         style: TextStyle(
                             decoration: TextDecoration.none,
                             fontSize: 100,
-                            fontFamily: 'LobsterTwo',
-                            color: Colors.black),
+                            fontFamily: 'Lobster',
+                            color: Colors.white70),
                       ),
                     ),
                   ),
                   SizedBox(
-                    height: 40,
+                    height: 20,
                   ),
                   Container(
                     decoration: BoxDecoration(
@@ -46,29 +45,13 @@ class Menu extends StatelessWidget {
                       ]),
                     ),
                     height: 600,
+                    width: 400,
                     child: Column(
                       mainAxisAlignment: MainAxisAlignment.center,
                       crossAxisAlignment: CrossAxisAlignment.center,
                       children: [
-                        const Card(
-                          elevation: 8,
-                          color: Colors.black12,
-                          child: Padding(
-                            padding: EdgeInsets.all(25),
-                            child: Text(
-                              "PERINGATAN: Kami menciptakan aplikasi ini, hanya untuk mempermudah para pembaca dan penghafal Al-qur'an yang sedang dalam perjalanan jauh / safar.Di mohon untuk tidak menyalahgunakan aplikasi ini,tanpa ada udzur Syar'i dan perizinan dari pihak setempat",
-                              textDirection: TextDirection.ltr,
-                              style: TextStyle(
-                                decoration: TextDecoration.none,
-                                fontSize: 30.0,
-                                fontFamily: 'Righteous',
-                                color: Colors.white60,
-                              ),
-                            ),
-                          ),
-                        ),
                         SizedBox(
-                          height: 60.0,
+                          height: 30.0,
                         ),
                         Container(
                           decoration: BoxDecoration(
@@ -81,17 +64,87 @@ class Menu extends StatelessWidget {
                             child: Padding(
                               padding: const EdgeInsets.all(30.0),
                               child: Text(
-                                "Read It",
+                                "Al -Qur'an",
                                 style: TextStyle(
                                     color: Colors.white,
                                     fontSize: 25.0,
-                                    fontFamily: 'PressStart2P'),
+                                    fontFamily: 'LobsterTwo'
+                                    ),
                               ),
                             ),
                           ),
                         ),
                         SizedBox(
-                          height: 60.0,
+                          height: 30.0,
+                        ),
+                        Container(
+                          decoration: BoxDecoration(
+                              color: Colors.blueAccent,
+                              borderRadius: BorderRadius.circular(16)),
+                          child: RaisedButton(
+                            elevation: 5,
+                            onPressed: () {},
+                            color: Colors.green[900],
+                            child: Padding(
+                              padding: const EdgeInsets.all(30.0),
+                              child: Text(
+                                "Hadist",
+                                style: TextStyle(
+                                    color: Colors.white,
+                                    fontSize: 25.0,
+                                    fontFamily: 'LobsterTwo'),
+                              ),
+                            ),
+                          ),
+                        ),
+                        SizedBox(
+                          height: 30.0,
+                        ),
+                        Container(
+                          decoration: BoxDecoration(
+                              color: Colors.blueAccent,
+                              borderRadius: BorderRadius.circular(16)),
+                          child: RaisedButton(
+                            elevation: 5,
+                            onPressed: () {},
+                            color: Colors.green[900],
+                            child: Padding(
+                              padding: const EdgeInsets.all(30.0),
+                              child: Text(
+                                "Dzikir pagi",
+                                style: TextStyle(
+                                    color: Colors.white,
+                                    fontSize: 25.0,
+                                    fontFamily: 'LobsterTwo'),
+                              ),
+                            ),
+                          ),
+                        ),
+                        SizedBox(
+                          height: 30.0,
+                        ),
+                        Container(
+                          decoration: BoxDecoration(
+                              color: Colors.blueAccent,
+                              borderRadius: BorderRadius.circular(16)),
+                          child: RaisedButton(
+                            elevation: 5,
+                            onPressed: () {},
+                            color: Colors.green[900],
+                            child: Padding(
+                              padding: const EdgeInsets.all(30.0),
+                              child: Text(
+                                "Dzikir petang",
+                                style: TextStyle(
+                                    color: Colors.white,
+                                    fontSize: 25.0,
+                                    fontFamily: 'LobsterTwo'),
+                              ),
+                            ),
+                          ),
+                        ),
+                        SizedBox(
+                          height: 40.0,
                         ),
                       ],
                     ),
