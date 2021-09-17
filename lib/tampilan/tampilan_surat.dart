@@ -11,6 +11,7 @@ class TampilanSurat extends StatelessWidget {
         child: Padding(
           padding: const EdgeInsets.all(8.0),
           child: Container(
+            height: 1200,
             child: Container(
               color: Colors.white,
               child: ListView.builder(
@@ -127,3 +128,4 @@ class TampilanSurat extends StatelessWidget {
               //     ),
               //   ],
               // ),
+              
