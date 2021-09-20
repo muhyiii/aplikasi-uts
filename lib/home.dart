@@ -1,4 +1,5 @@
 import 'dart:io';
+import 'dart:ui';
 import 'package:aplikasi_uts/menu.dart';
 import 'package:aplikasi_uts/palatte.dart';
 
@@ -20,7 +21,7 @@ class Home extends StatelessWidget {
               child: Column(
                 children: [
                   SizedBox(
-                    height: 100,
+                    height: 150,
                   ),
                   Container(
                     height: 180,
@@ -30,83 +31,131 @@ class Home extends StatelessWidget {
                         textDirection: TextDirection.ltr,
                         style: TextStyle(
                             decoration: TextDecoration.none,
-                            fontSize: 100,
-                            fontFamily: 'LobsterTwo',
+                            fontSize: 85,
+                            fontFamily: 'Lobster',
                             color: Colors.white70),
                       ),
                     ),
                   ),
                   SizedBox(
-                    height: 40,
+                    height: 20,
                   ),
                   Container(
+                    
                     decoration: BoxDecoration(
-                      gradient: LinearGradient(colors: [
-                        Colors.lightGreen.shade900,
-                        Colors.lime.shade900
-                      ]),
+                      image: DecorationImage(image: NetworkImage("https://media.istockphoto.com/videos/green-crystal-video-id472563747?s=640x640"),fit: BoxFit.cover,),
+                      borderRadius: BorderRadius.only(
+                        bottomRight: Radius.circular(10),
+                        topRight: Radius.circular(10),
+                        bottomLeft: Radius.circular(10),
+                        topLeft: Radius.circular(10),
+                      ),
+                      
+                      // gradient: LinearGradient(colors: [
+                      //   Colors.lightGreen.shade900,
+                      //   Colors.lime.shade900
+                      // ]),
                     ),
                     height: 600,
                     child: Column(
                       mainAxisAlignment: MainAxisAlignment.center,
                       crossAxisAlignment: CrossAxisAlignment.center,
                       children: [
-                        const Card(
-                          shape: RoundedRectangleBorder(
-                              borderRadius: BorderRadius.only(
-                            bottomRight: Radius.circular(10),
-                            topRight: Radius.circular(10),
-                            bottomLeft: Radius.circular(10),
-                            topLeft: Radius.circular(10),
-                          )),
-                          elevation: 5,
-                          color: Colors.black12,
-                          child: Padding(
-                            padding: EdgeInsets.all(25),
-                            child: Text(
-                              "PERINGATAN: Kami menciptakan aplikasi ini, hanya untuk mempermudah para pembaca dan penghafal Al-qur'an yang sedang dalam perjalanan jauh / safar.Di mohon untuk tidak menyalahgunakan aplikasi ini,tanpa ada udzur Syar'i dan perizinan dari pihak setempat",
-                              textDirection: TextDirection.ltr,
-                              style: TextStyle(
-                                decoration: TextDecoration.none,
-                                fontSize: 30.0,
-                                fontFamily: 'Righteous',
-                                color: Colors.white60,
-                              ),
-                            ),
-                          ),
-                        ),
-                        SizedBox(
-                          height: 60.0,
-                        ),
-                        Container(
-                          
-                          decoration: BoxDecoration(
+                        // BackgroundImage(),
+
+//card1
+                        // const Card(
+                        //   shape: RoundedRectangleBorder(
+                        //       borderRadius: BorderRadius.only(
+                        //     bottomRight: Radius.circular(10),
+                        //     topRight: Radius.circular(10),
+                        //     bottomLeft: Radius.circular(10),
+                        //     topLeft: Radius.circular(10),
+                        //   )),
+                        //   elevation: 5,
+                        //   color: Colors.black26,
+                        //   child: Padding(
+                        //     padding: EdgeInsets.all(25),
+                        //     child: Text(
+                        //       "PERINGATAN: Kami menciptakan aplikasi ini, hanya untuk mempermudah para pembaca dan penghafal Al-qur'an yang sedang dalam perjalanan jauh / safar.Di mohon untuk tidak menyalahgunakan aplikasi ini,tanpa ada udzur Syar'i dan perizinan dari pihak setempat",
+                        //       textDirection: TextDirection.ltr,
+                        //       style: TextStyle(
+                        //         decoration: TextDecoration.none,
+                        //         fontSize: 30.0,
+                        //         fontFamily: 'Righteous',
+                        //         color: Colors.white60,
+                        //       ),
+                        //     ),
+                        //   ),
+                        // ),
+//card2
+                        // Card(
+                        //   child: Container(
+                        //     height: 300,
+                        //     decoration: BoxDecoration(
+                              
+                        //       color: Colors.black26,
+                              
+                        //       // image: DecorationImage(
+                        //       //   image: NetworkImage("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRYlLlv72qH3a_Gie_IiE1WnmfDkEn-MGrUJQ&usqp=CAU",
+                                
+                        //       //   ),
+                        //       //   fit: BoxFit.fitWidth,
+                        //       //   alignment: Alignment.topCenter,
+                        //       // ),
+                        //     ),
+                        //     // child: Text("YOUR TEXT"),
                             
-                              color: Colors.greenAccent,
-                              borderRadius: BorderRadius.circular(16)),
+                        //   ),
+                        // ),
+                        
+                        SizedBox(
+                          height: 400.0,
+                          child: Image.asset("image/Group 3.png",),
+                        ),
+                        
+                        Container(
+                          decoration: BoxDecoration(
+                              gradient: LinearGradient(colors: [Colors.green.shade800,Colors.green.shade600]),
+                              borderRadius: BorderRadius.circular(80)),
                           child: RaisedButton(
-                            elevation: 5,
+                            
+                            
+                            shape: RoundedRectangleBorder(
+                              
+                              borderRadius: BorderRadius.only(
+                              bottomRight: Radius.circular(800),
+                              topRight: Radius.circular(30),
+                              bottomLeft: Radius.circular(30),
+                              topLeft: Radius.circular(600),
+                              
+                            )),
+                            // shape: CircleBorder(),
+                            elevation: 8,
                             onPressed: () {
                               Navigator.push(context,
                                   MaterialPageRoute(builder: (context) {
                                 return Menu();
                               }));
                             },
-                            color: Colors.green[900],
+                            color: Colors.green[700],
+                            
                             child: Padding(
-                              padding: const EdgeInsets.all(30.0),
+                              
+                              padding: const EdgeInsets.all(50.0),
+                              
                               child: Text(
                                 "Read It",
                                 style: TextStyle(
-                                    color: Colors.white,
-                                    fontSize: 25.0,
-                                    fontFamily: 'PressStart2P'),
+                                    color: Colors.white60,
+                                    fontSize: 50.0,
+                                    fontFamily: 'LobsterTwo'),
                               ),
                             ),
                           ),
                         ),
                         SizedBox(
-                          height: 60.0,
+                          height: 20.0,
                         ),
                       ],
                     ),

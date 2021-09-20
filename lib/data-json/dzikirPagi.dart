@@ -1,4 +1,4 @@
-class DzikirPagi {
+class DzikirPagiii {
   int no;
   String perintah;
   String arab;
@@ -6,7 +6,7 @@ class DzikirPagi {
   String arti;
   String faedah;
 
-  DzikirPagi(
+  DzikirPagiii(
       {required this.no,
       required this.perintah,
       required this.arab,
@@ -15,8 +15,9 @@ class DzikirPagi {
       required this.faedah});
 }
 
+
 var dataDzikirPagi = [
-  DzikirPagi(
+  DzikirPagiii(
       no: 1,
       perintah: "Membaca ayat Kursi",
       arab:
@@ -27,7 +28,7 @@ var dataDzikirPagi = [
           "“Allah, tidak ada ilah (yang berhak disembah) melainkan Dia, yang hidup kekal lagi terus menerus mengurus (makhluk-Nya). Dia tidak mengantuk dan tidak tidur. Kepunyaan-Nya apa yang di langit dan di bumi. Tiada yang dapat memberi syafa’at di sisi-Nya tanpa seizin-Nya. Dia mengetahui apa-apa yang di hadapan mereka dan di belakang mereka. Mereka tidak mengetahui apa-apa dari ilmu Allah melainkan apa yang dikehendaki-Nya. Kursi Allah meliputi langit dan bumi. Dia tidak merasa berat memelihara keduanya. Dan Dia Maha Tinggi lagi Maha besar.” (QS. Al Baqarah: 255) (Dibaca 1 x)",
       faedah:
           "Siapa yang membacanya ketika petang, maka ia akan dilindungi (oleh Allah dari berbagai gangguan) hingga pagi. Siapa yang membacanya ketika pagi, maka ia akan dilindungi hingga petang."),
-  DzikirPagi(
+  DzikirPagiii(
       no: 2,
       perintah: "Membaca surat Al Ikhlas, Al Falaq, An Naas",
       arab:
@@ -38,7 +39,7 @@ var dataDzikirPagi = [
           "“Allah, tidak ada ilah (yang berhak disembah) melainkan Dia, yang hidup kekal lagi terus menerus mengurus (makhluk-Nya). Dia tidak mengantuk dan tidak tidur. Kepunyaan-Nya apa yang di langit dan di bumi. Tiada yang dapat memberi syafa’at di sisi-Nya tanpa seizin-Nya. Dia mengetahui apa-apa yang di hadapan mereka dan di belakang mereka. Mereka tidak mengetahui apa-apa dari ilmu Allah melainkan apa yang dikehendaki-Nya. Kursi Allah meliputi langit dan bumi. Dia tidak merasa berat memelihara keduanya. Dan Dia Maha Tinggi lagi Maha besar.” (QS. Al Baqarah: 255) (Dibaca 1 x)",
       faedah:
           "Siapa yang membacanya ketika petang, maka ia akan dilindungi (oleh Allah dari berbagai gangguan) hingga pagi. Siapa yang membacanya ketika pagi, maka ia akan dilindungi hingga petang."),
-  DzikirPagi(
+  DzikirPagiii(
       no: 3,
       perintah: "",
       arab:
@@ -49,7 +50,7 @@ var dataDzikirPagi = [
           "“Kami telah memasuki waktu pagi dan kerajaan hanya milik Allah, segala puji bagi Allah. Tidak ada ilah (yang berhak disembah) kecuali Allah semata, tiada sekutu bagi-Nya. Milik Allah kerajaan dan bagi-Nya pujian. Dia-lah Yang Mahakuasa atas segala sesuatu. Wahai Rabbku, aku mohon kepada-Mu kebaikan di hari ini dan kebaikan sesudahnya. Aku berlindung kepada-Mu dari kejahatan hari ini dan kejahatan sesudahnya. Wahai Rabbku, aku berlindung kepada-Mu dari kemalasan dan kejelekan di hari tua. Wahai Rabbku, aku berlindung kepada-Mu dari siksaan di neraka dan siksaan di alam kubur.”",
       faedah:
           "Meminta pada Allah kebaikan di hari ini dan kebaikan sesudahnya, juga agar terhindar dari kejelekan di hari ini dan kejelekan sesudahnya. Di dalamnya berisi pula permintaan agar terhindar dari rasa malas padahal mampu untuk beramal, juga agar terhindar dari kejelekan di masa tua. Di dalamnya juga berisi permintaan agar terselamatkan dari siksa kubur dan siksa neraka yang merupakan siksa terberat di hari kiamat kelak."),
-  DzikirPagi(
+  DzikirPagiii(
     no: 4,
     perintah: "",
     arab:
@@ -60,7 +61,7 @@ var dataDzikirPagi = [
         "“Ya Allah, dengan rahmat dan pertolongan-Mu kami memasuki waktu pagi, dan dengan rahmat dan pertolongan-Mu kami memasuki waktu petang. Dengan rahmat dan pertolongan-Mu kami hidup dan dengan kehendak-Mu kami mati. Dan kepada-Mu kebangkitan (bagi semua makhluk).” (Dibaca 1 x)",
     faedah: "",
   ),
-  DzikirPagi(
+  DzikirPagiii(
       no: 5,
       perintah: "Membaca Sayyidul Istighfar",
       arab:
@@ -71,7 +72,7 @@ var dataDzikirPagi = [
           "“Ya Allah, Engkau adalah Rabbku, tidak ada ilah yang berhak disembah kecuali Engkau, Engkaulah yang menciptakanku. Aku adalah hamba-Mu. Aku akan setia pada perjanjianku pada-Mu (yaitu aku akan mentauhidkan-Mu) semampuku dan aku yakin akan janji-Mu (berupa surga untukku). Aku berlindung kepada-Mu dari kejelekan yang kuperbuat. Aku mengakui nikmat-Mu kepadaku dan aku mengakui dosaku. Oleh karena itu, ampunilah aku. Sesungguhnya tiada yang mengampuni dosa kecuali Engkau.” (Dibaca 1 x)",
       faedah:
           "Barangsiapa mengucapkan dzikir ini di siang hari dalam keadaan penuh keyakinan, lalu ia mati pada hari tersebut sebelum petang hari, maka ia termasuk penghuni surga. Barangsiapa yang mengucapkannya di malam hari dalam keadaan penuh keyakinan, lalu ia mati sebelum pagi, maka ia termasuk penghuni surga."),
-  DzikirPagi(
+  DzikirPagiii(
       no: 6,
       perintah: "",
       arab:
@@ -81,7 +82,7 @@ var dataDzikirPagi = [
       arti:
           "“Ya Allah, sesungguhnya aku memohon kebajikan dan keselamatan di dunia dan akhirat. Ya Allah, sesungguhnya aku memohon kebajikan dan keselamatan dalam agama, dunia, keluarga dan hartaku. Ya Allah, tutupilah auratku (aib dan sesuatu yang tidak layak dilihat orang) dan tentramkan-lah aku dari rasa takut. Ya Allah, peliharalah aku dari depan, belakang, kanan, kiri dan dari atasku. Aku berlindung dengan kebesaran-Mu, agar aku tidak disambar dari bawahku (aku berlindung dari dibenamkan ke dalam bumi).”(Dibaca 1x)",
       faedah: ""),
-  DzikirPagi(
+  DzikirPagiii(
       no: 7,
       perintah: "",
       arab:
@@ -92,7 +93,7 @@ var dataDzikirPagi = [
           "“Ya Allah, sesungguhnya aku memohon kebajikan dan keselamatan di dunia dan akhirat. Ya Allah, sesungguhnya aku memohon kebajikan dan keselamatan dalam agama, dunia, keluarga dan hartaku. Ya Allah, tutupilah auratku (aib dan sesuatu yang tidak layak dilihat orang) dan tenteramkanlah aku dari rasa takut. Ya Allah, peliharalah aku dari muka, belakang, kanan, kiri dan atasku. Aku berlindung dengan kebesaran-Mu, agar aku tidak disambar dari bawahku (oleh ular atau tenggelam dalam bumi dan lain-lain yang membuat aku jatuh).” (Dibaca 1 x)",
       faedah:
           "Rasulullah shallallahu ‘alaihi wa sallam tidaklah pernah meninggalkan do’a ini di pagi dan petang hari. Di dalamnya berisi perlindungan dan keselamatan pada agama, dunia, keluarga dan harta dari berbagai macam gangguan yang datang dari berbagai arah."),
-  DzikirPagi(
+  DzikirPagiii(
     no: 8,
     perintah: "",
     arab:
@@ -104,7 +105,7 @@ var dataDzikirPagi = [
     faedah:
         "Do’a ini diajarkan oleh Rasulullah shallallahu ‘alaihi wa sallam pada Abu Bakr Ash Shiddiq radhiyallahu ‘anhu untuk dibaca pada pagi, petang dan saat beranjak tidur.",
   ),
-  DzikirPagi(
+  DzikirPagiii(
       no: 9,
       perintah: "",
       arab:
@@ -115,7 +116,7 @@ var dataDzikirPagi = [
           "“Dengan nama Allah yang bila disebut, segala sesuatu di bumi dan langit tidak akan berbahaya, Dia-lah Yang Maha Mendengar lagi Maha Mengetahui.” (Dibaca 3 x)",
       faedah:
           "Barangsiapa yang mengucapkan dzikir tersebut sebanyak tiga kali di pagi hari dan tiga kali di petang hari, maka tidak akan ada bahaya yang tiba-tiba memudaratkannya."),
-  DzikirPagi(
+  DzikirPagiii(
       no: 10,
       perintah: "",
       arab:
@@ -126,7 +127,7 @@ var dataDzikirPagi = [
           "“Aku ridha Allah sebagai Rabb, Islam sebagai agama dan Muhammad shallallahu ‘alaihi wa sallam sebagai nabi.” (Dibaca 3 x)",
       faedah:
           "Barangsiapa yang mengucapkan dzikir ini sebanyak tiga kali di pagi hari dan tiga kali di petang hari, maka pantas baginya mendapatkan ridha Allah."),
-  DzikirPagi(
+  DzikirPagiii(
       no: 11,
       perintah: "",
       arab:
@@ -137,7 +138,7 @@ var dataDzikirPagi = [
           "“Wahai Rabb Yang Maha Hidup, wahai Rabb Yang Berdiri Sendiri (tidak butuh segala sesuatu), dengan rahmat-Mu aku minta pertolongan, perbaikilah segala urusanku dan jangan diserahkan kepadaku sekali pun sekejap mata (tanpa mendapat pertolongan dariMu).” (Dibaca 1 x)",
       faedah:
           "Dzikir ini diajarkan oleh Nabi shallallahu ‘alaihi wa sallam pada Fathimah supaya diamalkan pagi dan petang."),
-  DzikirPagi(
+  DzikirPagiii(
       no: 12,
       perintah: "",
       arab:
@@ -148,7 +149,7 @@ var dataDzikirPagi = [
           "“Di waktu pagi kami memegang agama Islam, kalimat ikhlas (kalimat syahadat), agama Nabi kami Muhammad shallallahu ‘alaihi wa sallam, dan agama bapak kami Ibrahim, yang berdiri di atas jalan yang lurus, muslim dan tidak tergolong orang-orang musyrik.” (Dibaca 1 x di pagi hari saja)",
       faedah: ""),
       
-      DzikirPagi(
+      DzikirPagiii(
       no: 13,
       perintah: "",
       arab:
@@ -158,7 +159,7 @@ var dataDzikirPagi = [
       arti:
           "“Maha suci Allah, aku memuji-Nya.” (Dibaca 100 x)",
       faedah: "Barangsiapa yang mengucapkan kalimat ‘subhanallah wa bi hamdih’ di pagi dan petang hari sebanyak 100 x, maka tidak ada yang datang pada hari kiamat yang lebih baik dari yang ia lakukan kecuali orang yang mengucapkan semisal atau lebih dari itu."),
-      DzikirPagi(
+      DzikirPagiii(
       no: 14,
       perintah: "",
       arab:
@@ -168,7 +169,7 @@ var dataDzikirPagi = [
       arti:
           "“Tidak ada ilah yang berhak disembah selain Allah semata, tidak ada sekutu bagiNya. Bagi-Nya kerajaan dan segala pujian. Dia-lah yang berkuasa atas segala sesuatu.” (Dibaca 1 atau 10 atau 100 x)",
       faedah: ""),
-      DzikirPagi(
+      DzikirPagiii(
       no: 15,
       perintah: "",
       arab:
@@ -178,7 +179,7 @@ var dataDzikirPagi = [
       arti:
           "“Maha Suci Allah, aku memujiNya sebanyak makhluk-Nya, sejauh kerelaan-Nya, seberat timbangan ‘Arsy-Nya dan sebanyak tinta tulisan kalimat-Nya.” (Dibaca 3 x di waktu pagi saja)",
       faedah: ""),
-      DzikirPagi(
+      DzikirPagiii(
       no: 16,
       perintah: "",
       arab:
@@ -188,7 +189,7 @@ var dataDzikirPagi = [
       arti:
           "“Ya Allah, sungguh aku memohon kepada-Mu ilmu yang bermanfaat (bagi diriku dan orang lain), rizki yang halal dan amal yang diterima (di sisi-Mu dan mendapatkan ganjaran yang baik).” (Dibaca 1 x)",
       faedah: ""),
-      DzikirPagi(
+      DzikirPagiii(
       no: 17,
       perintah: "",
       arab:
