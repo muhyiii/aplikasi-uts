@@ -1,6 +1,7 @@
 import 'dart:io';
-import 'package:aplikasi_uts/data-json/dzikirPetang.dart';
-import 'package:aplikasi_uts/data-json/dzikirPagi.dart';
+
+import 'package:aplikasi_uts/DZIKIR-PAGI.dart';
+import 'package:aplikasi_uts/DZIKIR-PETANG.dart';
 import 'package:aplikasi_uts/palatte.dart';
 import 'package:aplikasi_uts/tampilan/dzikir_pagi.dart';
 import 'package:aplikasi_uts/tampilan/dzikir_petang.dart';
@@ -22,7 +23,7 @@ class Menu extends StatelessWidget {
               child: Column(
                 children: [
                   SizedBox(
-                    height: 150,
+                    height: 10,
                   ),
                   Container(
                     height: 140,

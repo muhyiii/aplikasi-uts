@@ -3,90 +3,155 @@ import 'package:aplikasi_uts/tampilan/tampilan_ayat.dart';
 import 'package:flutter/material.dart';
 
 class TampilanSurat extends StatelessWidget {
-  
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      body: SafeArea(
-        child: Padding(
-          padding: const EdgeInsets.all(8.0),
-          child: Container(
-            height: 1200,
-            child: Container(
-              color: Colors.white,
-              child: ListView.builder(
-                itemCount: dataAlQuran.length,
-                itemBuilder: (context, index) {
-                  final AlQuran place = dataAlQuran[index];
-                  return InkWell(
-                      onTap: () {
-                        Navigator.push(
-                          context,
-                          MaterialPageRoute(
-                            builder: (context) {
-                              return TampilanAyat(
-                               
-                              );
+    return MaterialApp(
+      
+      debugShowCheckedModeBanner: false,
+      home: SafeArea(
+        child: Container(
+          decoration: BoxDecoration(
+            border: Border.all(width: 5,color: Colors.grey),
+          ),
+          height: (MediaQuery.of(context).size.height),
+          width: (MediaQuery.of(context).size.width),
+          child: Column(
+            children: [
+              Expanded(
+                flex: 2,
+               
+                  
+                    child: Scaffold(
+                      body: Container(
+                        
+                        decoration: BoxDecoration(
+              image: DecorationImage(
+                  image: AssetImage("image/u.png"), fit: BoxFit.fill)),
+                          height: 140,
+                          child: Row(
+                            children: [
+                              SizedBox(width: 10),
+                              // IconButton(onPressed: (){
+                              //   Navigator.push(context, MaterialPageRoute(builder: (context){
+                              //     // return Menu();
+                              //   }));
+                              // },
+                              //   icon: Icon(
+                              //     Icons.arrow_back,
+                              //     size: 40,
+                              //   ),
+                              // ),
+                              SizedBox(
+                                width: 140,
+                              ),
+                              Text(
+                                "Al-Qur'an Al-Karim",
+                                style: TextStyle(
+                                    fontSize: 40, color: Colors.black87),
+                              )
+                            ],
+                          )),
+                    
+                  
+                ),
+              ),
+              Expanded(
+                flex: 22,
+                child: Scaffold(
+                  body: Container(
+                    decoration: BoxDecoration(
+                        image: DecorationImage(
+                            image: AssetImage("image/u.png"),
+                            fit: BoxFit.fill)),
+                    child: SafeArea(
+                      child: Padding(
+                        padding: const EdgeInsets.only(left: 8, right: 8, bottom: 20),
+                        child: Container(
+                          child: ListView.builder(
+                            itemCount: dataAlQuran.length,
+                            itemBuilder: (context, index) {
+                              final AlQuran place = dataAlQuran[index];
+                              return InkWell(
+                                  onTap: () {
+                                    Navigator.push(
+                                      context,
+                                      MaterialPageRoute(
+                                        builder: (context) {
+                                          return TampilanAyat();
+                                        },
+                                      ),
+                                    );
+                                  },
+                                  child: Padding(
+                                    padding: const EdgeInsets.only(),
+                                    child: Container(height: 110,
+                                      decoration: BoxDecoration(
+                                          color: Colors.black87,
+                                          border: Border.all(
+                                              width: 2, color: Colors.grey),
+                                          borderRadius:
+                                              BorderRadius.circular(15)),
+                                      child: Padding(
+                                        padding: EdgeInsets.only(
+                                            left: 30, right: 20),
+                                        child: Row(
+                                          children: [
+                                            Expanded(
+                                                flex: 1,
+                                                child: Text(
+                                                  "${place.id}",
+                                                  style: TextStyle(
+                                                      fontSize: 30,
+                                                      color: Colors.white),
+                                                )),
+                                            Expanded(
+                                              flex: 5,
+                                              child: Column(
+                                                crossAxisAlignment:
+                                                    CrossAxisAlignment.start,
+                                                mainAxisAlignment:
+                                                    MainAxisAlignment
+                                                        .spaceEvenly,
+                                                children: [
+                                                  Text(
+                                                    place.surat_name,
+                                                    style: TextStyle(
+                                                        fontSize: 40,
+                                                        color: Colors.white),
+                                                  ),
+                                                  Text(
+                                                    "${place.surat_terjemahan} - ${place.count_ayat} Ayat",
+                                                    style: TextStyle(
+                                                        fontSize: 20,
+                                                        color: Colors.white),
+                                                  ),
+                                                ],
+                                              ),
+                                            ),
+                                            Expanded(
+                                              flex: 3,
+                                              child: Text(
+                                                place.surat_text,
+                                                textAlign: TextAlign.right,
+                                                style: TextStyle(
+                                                    fontSize: 50,
+                                                    color: Colors.white),
+                                              ),
+                                            )
+                                          ],
+                                        ),
+                                      ),
+                                    ),
+                                  ));
                             },
                           ),
-                        );
-                      },
-                      child: Padding(
-                        padding: const EdgeInsets.all(8.0),
-                        child: Container(
-                          decoration: BoxDecoration(
-                              color: Colors.black87,
-                              border: Border.all(width: 1, color: Colors.grey),
-                              borderRadius: BorderRadius.circular(20)),
-                          child: Padding(
-                            padding: EdgeInsets.only(left: 30, right: 20),
-                            child: Row(
-                              children: [
-                                Expanded(
-                                    flex: 1,
-                                    child: Text(
-                                      "${place.id}",
-                                      style: TextStyle(
-                                          fontSize: 30, color: Colors.white),
-                                    )),
-                                Expanded(
-                                  flex: 5,
-                                  child: Column(
-                                    crossAxisAlignment: CrossAxisAlignment.start,
-                                    mainAxisAlignment:
-                                        MainAxisAlignment.spaceEvenly,
-                                    children: [
-                                      Text(
-                                        place.surat_name,
-                                        style: TextStyle(
-                                            fontSize: 40, color: Colors.white),
-                                      ),
-                                      Text(
-                                        "${place.surat_terjemahan} - ${place.count_ayat} Ayat",
-                                        style: TextStyle(
-                                            fontSize: 20, color: Colors.white),
-                                      ),
-                                      
-                                    ],
-                                  ),
-                                ),
-                                Expanded(
-                                  flex: 3,
-                                  child: Text(
-                                    place.surat_text,
-                                    textAlign: TextAlign.right,
-                                    style: TextStyle(
-                                        fontSize: 50, color: Colors.white),
-                                  ),
-                                )
-                              ],
-                            ),
-                          ),
                         ),
-                      ));
-                },
-              ),
-            ),
+                      ),
+                    ),
+                  ),
+                ),
+              )
+            ],
           ),
         ),
       ),

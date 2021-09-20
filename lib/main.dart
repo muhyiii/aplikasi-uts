@@ -1,7 +1,11 @@
 
+import 'package:aplikasi_uts/DZIKIR-PAGI.dart';
+import 'package:aplikasi_uts/DZIKIR-PETANG.dart';
+import 'package:aplikasi_uts/data-json/dzikirPetang.dart';
 import 'package:aplikasi_uts/hasilSurat.dart';
 import 'package:aplikasi_uts/home.dart';
 import 'package:aplikasi_uts/tampilan/dzikir_pagi.dart';
+import 'package:aplikasi_uts/tampilan/dzikir_petang.dart';
 import 'package:aplikasi_uts/tampilan/tampilan_ayat.dart';
 import 'package:aplikasi_uts/tampilan/tampilan_surat.dart';
 import 'package:aplikasi_uts/widget/background-image.dart';
