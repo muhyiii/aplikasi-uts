@@ -1,4 +1,6 @@
 
+import 'package:aplikasi_uts/DZIKIR-PAGI.dart';
+import 'package:aplikasi_uts/DZIKIR-PETANG.dart';
 import 'package:aplikasi_uts/data-json/dzikirPetang.dart';
 import 'package:aplikasi_uts/hasilSurat.dart';
 import 'package:aplikasi_uts/home.dart';
@@ -22,7 +24,7 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       title: "Qur'an Care",
       theme: ThemeData(primarySwatch: Colors.green),
-      home:  TampilanSurat(),
+      home:DzikirPetang(),
       
     );
   }

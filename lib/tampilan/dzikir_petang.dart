@@ -2,7 +2,7 @@ import 'package:aplikasi_uts/data-json/dzikirPagi.dart';
 import 'package:aplikasi_uts/data-json/dzikirPetang.dart';
 import 'package:flutter/material.dart';
 
-class DzikirPetang extends StatelessWidget {
+class TampilanDzikirPetang extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     PageController controller =

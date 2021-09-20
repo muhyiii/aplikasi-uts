@@ -65,7 +65,7 @@ class TampilanSurat extends StatelessWidget {
                             fit: BoxFit.fill)),
                     child: SafeArea(
                       child: Padding(
-                        padding: const EdgeInsets.only(left: 8, right: 8),
+                        padding: const EdgeInsets.only(left: 8, right: 8, bottom: 20),
                         child: Container(
                           child: ListView.builder(
                             itemCount: dataAlQuran.length,
@@ -83,14 +83,14 @@ class TampilanSurat extends StatelessWidget {
                                     );
                                   },
                                   child: Padding(
-                                    padding: const EdgeInsets.all(3.0),
+                                    padding: const EdgeInsets.only(),
                                     child: Container(height: 110,
                                       decoration: BoxDecoration(
                                           color: Colors.black87,
                                           border: Border.all(
                                               width: 2, color: Colors.grey),
                                           borderRadius:
-                                              BorderRadius.circular(10)),
+                                              BorderRadius.circular(15)),
                                       child: Padding(
                                         padding: EdgeInsets.only(
                                             left: 30, right: 20),

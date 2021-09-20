@@ -1,7 +1,7 @@
 import 'package:aplikasi_uts/data-json/dzikirPagi.dart';
 import 'package:flutter/material.dart';
 
-class DzikirPagi extends StatelessWidget {
+class TampilanDzikirPagi extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     PageController controller =
@@ -73,7 +73,7 @@ class DzikirPagi extends StatelessWidget {
                                image: DecorationImage(image: AssetImage("image/u.png"),fit: BoxFit.fill,),
                               
                             ),
-                            width: 700,
+                            width: 740,
                              
                             child: Padding(
                               padding: EdgeInsets.all(12),
@@ -90,7 +90,7 @@ class DzikirPagi extends StatelessWidget {
                                   ),
                                   Text(
                                     dataDzikirPagi[index].arab,
-                                    style: TextStyle(fontSize: 40,color: Colors.black87),
+                                    style: TextStyle(fontSize: 40,color: Colors.black87,fontFamily:"Noto_Naskh_Arabic"),
                                     textAlign: TextAlign.center,
                                   ),
                                   Text(
