@@ -1,7 +1,5 @@
-import 'dart:io';
 import 'dart:ui';
 import 'package:aplikasi_uts/menu.dart';
-import 'package:aplikasi_uts/palatte.dart';
 
 import './widget/widget.dart';
 
@@ -61,53 +59,7 @@ class Home extends StatelessWidget {
                       mainAxisAlignment: MainAxisAlignment.center,
                       crossAxisAlignment: CrossAxisAlignment.center,
                       children: [
-                        // BackgroundImage(),
-
-//card1
-                        // const Card(
-                        //   shape: RoundedRectangleBorder(
-                        //       borderRadius: BorderRadius.only(
-                        //     bottomRight: Radius.circular(10),
-                        //     topRight: Radius.circular(10),
-                        //     bottomLeft: Radius.circular(10),
-                        //     topLeft: Radius.circular(10),
-                        //   )),
-                        //   elevation: 5,
-                        //   color: Colors.black26,
-                        //   child: Padding(
-                        //     padding: EdgeInsets.all(25),
-                        //     child: Text(
-                        //       "PERINGATAN: Kami menciptakan aplikasi ini, hanya untuk mempermudah para pembaca dan penghafal Al-qur'an yang sedang dalam perjalanan jauh / safar.Di mohon untuk tidak menyalahgunakan aplikasi ini,tanpa ada udzur Syar'i dan perizinan dari pihak setempat",
-                        //       textDirection: TextDirection.ltr,
-                        //       style: TextStyle(
-                        //         decoration: TextDecoration.none,
-                        //         fontSize: 30.0,
-                        //         fontFamily: 'Righteous',
-                        //         color: Colors.white60,
-                        //       ),
-                        //     ),
-                        //   ),
-                        // ),
-//card2
-                        // Card(
-                        //   child: Container(
-                        //     height: 300,
-                        //     decoration: BoxDecoration(
-                              
-                        //       color: Colors.black26,
-                              
-                        //       // image: DecorationImage(
-                        //       //   image: NetworkImage("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRYlLlv72qH3a_Gie_IiE1WnmfDkEn-MGrUJQ&usqp=CAU",
-                                
-                        //       //   ),
-                        //       //   fit: BoxFit.fitWidth,
-                        //       //   alignment: Alignment.topCenter,
-                        //       // ),
-                        //     ),
-                        //     // child: Text("YOUR TEXT"),
-                            
-                        //   ),
-                        // ),
+                        
                         
                         SizedBox(
                           height: 400.0,

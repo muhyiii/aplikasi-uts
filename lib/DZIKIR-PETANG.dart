@@ -1,4 +1,3 @@
-import 'package:aplikasi_uts/tampilan/dzikir_pagi.dart';
 import 'package:aplikasi_uts/tampilan/dzikir_petang.dart';
 import 'package:flutter/material.dart';
 

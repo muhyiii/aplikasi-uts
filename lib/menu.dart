@@ -1,12 +1,7 @@
-import 'dart:io';
 
+import 'package:aplikasi_uts/ALQURAN.dart';
 import 'package:aplikasi_uts/DZIKIR-PAGI.dart';
 import 'package:aplikasi_uts/DZIKIR-PETANG.dart';
-import 'package:aplikasi_uts/palatte.dart';
-import 'package:aplikasi_uts/tampilan/dzikir_pagi.dart';
-import 'package:aplikasi_uts/tampilan/dzikir_petang.dart';
-import 'package:aplikasi_uts/tampilan/tampilan_surat.dart';
-import './widget/widget.dart';
 import 'package:aplikasi_uts/widget/backgrund_image.dart';
 import 'package:flutter/material.dart';
 
@@ -85,6 +80,7 @@ class Menu extends StatelessWidget {
                         decoration: BoxDecoration(
                             color: Colors.blueAccent,
                             borderRadius: BorderRadius.circular(16)),
+                        // ignore: deprecated_member_use
                         child: RaisedButton(
                           elevation: 5,
                            shape: RoundedRectangleBorder(
@@ -97,7 +93,7 @@ class Menu extends StatelessWidget {
                           onPressed: () {
                             Navigator.push(context,
                                 MaterialPageRoute(builder: (context) {
-                              return TampilanSurat();
+                              return AlquranAlkarim();
                             }));
                           },
                           color: Colors.green[900],
@@ -121,6 +117,7 @@ class Menu extends StatelessWidget {
                         decoration: BoxDecoration(
                             color: Colors.blueAccent,
                             borderRadius: BorderRadius.circular(16)),
+                        // ignore: deprecated_member_use
                         child: RaisedButton(
                            shape: RoundedRectangleBorder(
                             borderRadius: BorderRadius.only(

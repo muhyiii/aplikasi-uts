@@ -1,4 +1,5 @@
 import 'package:aplikasi_uts/data-json/alquran.dart';
+import 'package:aplikasi_uts/menu.dart';
 import 'package:aplikasi_uts/tampilan/tampilan_ayat.dart';
 import 'package:flutter/material.dart';
 
@@ -6,53 +7,51 @@ class TampilanSurat extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      
       debugShowCheckedModeBanner: false,
       home: SafeArea(
         child: Container(
+          padding: EdgeInsets.all(0),
           decoration: BoxDecoration(
-            border: Border.all(width: 5,color: Colors.grey),
+            border: Border.all(width: 5, color: Colors.grey),
           ),
-          height: (MediaQuery.of(context).size.height),
-          width: (MediaQuery.of(context).size.width),
+            height: (MediaQuery.of(context).size.height),
+            width: (MediaQuery.of(context).size.width),
           child: Column(
             children: [
               Expanded(
                 flex: 2,
-               
-                  
-                    child: Scaffold(
-                      body: Container(
-                        
-                        decoration: BoxDecoration(
-              image: DecorationImage(
-                  image: AssetImage("image/u.png"), fit: BoxFit.fill)),
-                          height: 140,
-                          child: Row(
-                            children: [
-                              SizedBox(width: 10),
-                              // IconButton(onPressed: (){
-                              //   Navigator.push(context, MaterialPageRoute(builder: (context){
-                              //     // return Menu();
-                              //   }));
-                              // },
-                              //   icon: Icon(
-                              //     Icons.arrow_back,
-                              //     size: 40,
-                              //   ),
-                              // ),
-                              SizedBox(
-                                width: 140,
-                              ),
-                              Text(
-                                "Al-Qur'an Al-Karim",
-                                style: TextStyle(
-                                    fontSize: 40, color: Colors.black87),
-                              )
-                            ],
-                          )),
-                    
-                  
+                child: Scaffold(
+                  body: Container(
+                      decoration: BoxDecoration(
+                          image: DecorationImage(
+                              image: AssetImage("image/u.png"),
+                              fit: BoxFit.fill)),
+                      height: 120,
+                      child: Row(
+                        children: [
+                          SizedBox(width: 10),
+                          IconButton(
+                            onPressed: () {
+                              Navigator.push(context,
+                                  MaterialPageRoute(builder: (context) {
+                                return Menu();
+                              }));
+                            },
+                            icon: Icon(
+                              Icons.arrow_back,
+                              size: 40,
+                            ),
+                          ),
+                          SizedBox(
+                            width: 140,
+                          ),
+                          Text(
+                            "Al-Qur'an Al-Karim",
+                            style:
+                                TextStyle(fontSize: 40, color: Colors.black87),
+                          )
+                        ],
+                      )),
                 ),
               ),
               Expanded(
@@ -65,7 +64,8 @@ class TampilanSurat extends StatelessWidget {
                             fit: BoxFit.fill)),
                     child: SafeArea(
                       child: Padding(
-                        padding: const EdgeInsets.only(left: 8, right: 8, bottom: 20),
+                        padding: const EdgeInsets.only(
+                            left: 8, right: 8, bottom: 20),
                         child: Container(
                           child: ListView.builder(
                             itemCount: dataAlQuran.length,
@@ -77,14 +77,15 @@ class TampilanSurat extends StatelessWidget {
                                       context,
                                       MaterialPageRoute(
                                         builder: (context) {
-                                          return TampilanAyat();
+                                          return TampilanAyat(ayat: place);
                                         },
                                       ),
                                     );
                                   },
                                   child: Padding(
                                     padding: const EdgeInsets.only(),
-                                    child: Container(height: 110,
+                                    child: Container(
+                                      height: 110,
                                       decoration: BoxDecoration(
                                           color: Colors.black87,
                                           border: Border.all(
