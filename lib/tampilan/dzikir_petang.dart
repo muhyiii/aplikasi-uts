@@ -1,4 +1,3 @@
-import 'package:aplikasi_uts/data-json/dzikirPagi.dart';
 import 'package:aplikasi_uts/data-json/dzikirPetang.dart';
 import 'package:flutter/material.dart';
 
@@ -38,15 +37,23 @@ class TampilanDzikirPetang extends StatelessWidget {
                   color: Colors.green,
                    borderRadius: BorderRadius.circular(10),
                 ),
-                      child: Row(
+                      child: Row(mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: [
-                          SizedBox(width:10),
-                          Icon(Icons.arrow_back,size: 40,),
-                          SizedBox(
-                            width: 190,
+                         
+                          IconButton(
+                                  onPressed: () {
+                                    Navigator.pop(context);
+                                  },
+                                  icon: Icon(
+                                    Icons.arrow_back,
+                                    size: 40,
+                                  )),
+                        
+                          Center(
+                            child: Text("Dzikir Petang",style: TextStyle(fontSize: 53,color: Colors.black87),
+                            ),
                           ),
-                          Text("Dzikir Petang",style: TextStyle(fontSize: 40,color: Colors.black87),
-                          )],
+                          SizedBox(width: 28,)],
                       )),),
                 ),
               ),
@@ -78,42 +85,48 @@ class TampilanDzikirPetang extends StatelessWidget {
                              
                             child: Padding(
                               padding: EdgeInsets.all(12),
-                              child: Column(
-                                
-                                children: [
-                                  Text(
-                                    "${dataDzikirPetang[index].no}. ${dataDzikirPetang[index].perintah}",
-                                    style: TextStyle(fontSize: 30,color: Colors.black87,fontWeight: FontWeight.w600),textAlign: TextAlign.center,
-                                  ),
-                                  SizedBox(
-                                    height: 10,
-                                  ),
-                                  Text(
-                                    dataDzikirPetang[index].arab,
-                                    style: TextStyle(fontSize: 40,color: Colors.black87),
-                                    textAlign: TextAlign.center,
-                                  ),
-                                  Text(
-                                    dataDzikirPetang[index].latin,
-                                    style: TextStyle(fontSize: 25,color: Colors.black87),
-                                    textAlign: TextAlign.center,
-                                  ),
-                                  SizedBox(
-                                    height: 40,
-                                  ),
-                                  Text(
-                                    dataDzikirPetang[index].arti,
-                                    style: TextStyle(fontSize: 20,color: Colors.black87),
-                                    textAlign: TextAlign.center,
-                                  ),
-                                  SizedBox(
-                                    height: 40,
-                                  ),
-                                  Text(
-                                    "${dataDzikirPetang[index].faedah}",
-                                    style: TextStyle(fontSize: 20,color: Colors.black87),
-                                  ),
-                                ],
+                              child: Padding(
+                                padding: const EdgeInsets.symmetric(horizontal: 20),
+                                child: Column(
+                                  
+                                  children: [
+                                    Text(
+                                      "${dataDzikirPetang[index].no}. ${dataDzikirPetang[index].perintah}",
+                                      style: TextStyle(fontSize: 30,color: Colors.black87,fontWeight: FontWeight.w600),textAlign: TextAlign.center,
+                                    ),
+                                    SizedBox(
+                                      height: 10,
+                                    ),
+                                    Padding(
+                                      padding: const EdgeInsets.symmetric(horizontal: 17),
+                                      child: Text(
+                                        dataDzikirPetang[index].arab,
+                                        style: TextStyle(fontSize: 40,color: Colors.black87),
+                                        textAlign: TextAlign.center,
+                                      ),
+                                    ),
+                                    Text(
+                                      dataDzikirPetang[index].latin,
+                                      style: TextStyle(fontSize: 25,color: Colors.black87),
+                                      textAlign: TextAlign.center,
+                                    ),
+                                    SizedBox(
+                                      height: 40,
+                                    ),
+                                    Text(
+                                      dataDzikirPetang[index].arti,
+                                      style: TextStyle(fontSize: 20,color: Colors.black87),
+                                      textAlign: TextAlign.center,
+                                    ),
+                                    SizedBox(
+                                      height: 40,
+                                    ),
+                                    Text(
+                                      "${dataDzikirPetang[index].faedah}",
+                                      style: TextStyle(fontSize: 20,color: Colors.black87),
+                                    ),
+                                  ],
+                                ),
                               ),
                             ),
                           ),

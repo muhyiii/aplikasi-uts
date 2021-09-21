@@ -1,12 +1,8 @@
-import 'dart:io';
-import 'package:flutter/animation.dart';
+
+import 'package:aplikasi_uts/ALQURAN.dart';
 import 'package:aplikasi_uts/DZIKIR-PAGI.dart';
 import 'package:aplikasi_uts/DZIKIR-PETANG.dart';
-import 'package:aplikasi_uts/palatte.dart';
-import 'package:aplikasi_uts/tampilan/dzikir_pagi.dart';
-import 'package:aplikasi_uts/tampilan/dzikir_petang.dart';
 import 'package:aplikasi_uts/tampilan/tampilan_surat.dart';
-import './widget/widget.dart';
 import 'package:aplikasi_uts/widget/backgrund_image.dart';
 import 'package:flutter/material.dart';
 

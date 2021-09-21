@@ -13,121 +13,149 @@ class TampilanDzikirPagi extends StatelessWidget {
     //     })
     //   });
     return MaterialApp(
-      debugShowCheckedModeBanner: false,
+        debugShowCheckedModeBanner: false,
         home: SafeArea(
-      child: Container(
-        color: Colors.white,
-        height: (MediaQuery.of(context).size.height),
-        width: (MediaQuery.of(context).size.width),
-     
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.spaceBetween ,
-          children: [
-            Expanded(
-              flex: 2,
-                child: Padding(
-                  padding: const EdgeInsets.all(8.0),
-                  child: Scaffold(
-                    body: 
-                    Container(
-                      // width: 700,
-                      height: 130,
-                decoration: BoxDecoration(
-              
-                  color: Colors.green,
-                   borderRadius: BorderRadius.circular(10),
-                ),
-                      child: Row(
-                        children: [
-                          SizedBox(width:10),
-                          Icon(Icons.arrow_back,size: 40,),
-                          SizedBox(
-                            width: 200,
+          child: Container(
+            color: Colors.white,
+            height: (MediaQuery.of(context).size.height),
+            width: (MediaQuery.of(context).size.width),
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+                Expanded(
+                  flex: 2,
+                  child: Padding(
+                    padding: const EdgeInsets.all(8.0),
+                    child: Scaffold(
+                      body: Container(
+                          // width: 700,
+                          height: 130,
+                          decoration: BoxDecoration(
+                            color: Colors.green,
+                            borderRadius: BorderRadius.circular(10),
                           ),
-                          Text("Dzikir Pagi",style: TextStyle(fontSize: 40,color: Colors.black87),
-                          )],
-                      )),),
+                          child: Row(mainAxisAlignment: MainAxisAlignment.spaceBetween ,
+                            children: [
+                              // SizedBox(width: 10),
+                              IconButton(
+                                  onPressed: () {
+                                    Navigator.pop(context);
+                                  },
+                                  icon: Icon(
+                                    Icons.arrow_back,
+                                    size: 40,
+                                  )),
+                              // SizedBox(
+                              //   width: 200,
+                              // ),
+                              Center(
+                                child: Text(
+                                  "Dzikir Pagi",
+                                  style: TextStyle(
+                                      fontSize: 52, color: Colors.black87),
+                                ),
+                              ),
+                              SizedBox(width: 28,),
+                            ],
+                          )),
+                    ),
+                  ),
                 ),
-              ),
-            
-            Expanded(
-              flex: 22,
-              child: PageView.builder(
-                controller: controller,
-                itemCount: dataDzikirPagi.length,
-                itemBuilder: (context, index) {
-                  return Scaffold(
-                    body: Container(
-                      decoration:
-                          BoxDecoration(borderRadius: BorderRadius.circular(20),
+                Expanded(
+                  flex: 22,
+                  child: PageView.builder(
+                    controller: controller,
+                    itemCount: dataDzikirPagi.length,
+                    itemBuilder: (context, index) {
+                      return Scaffold(
+                        body: Container(
+                          decoration: BoxDecoration(
+                            borderRadius: BorderRadius.circular(20),
                           ),
-                      child: SingleChildScrollView(
-                        // child: Transform(
-                        //   transform:Matrix4.skewY(1000),
+                          child: SingleChildScrollView(
+                            // child: Transform(
+                            //   transform:Matrix4.skewY(1000),
 
-                        child: Padding(
-                          padding: const EdgeInsets.all(20.0),
-                          child: Container(
-                            decoration: BoxDecoration(
-                              borderRadius: BorderRadius.circular(20),
-                               image: DecorationImage(image: AssetImage("image/u.png"),fit: BoxFit.fill,),
-                              
-                            ),
-                            width: 740,
-                             
                             child: Padding(
-                              padding: EdgeInsets.all(12),
-                              child: Column(
-                                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                                crossAxisAlignment: CrossAxisAlignment.center,
-                                children: [
-                                  Text(
-                                    "${dataDzikirPagi[index].no}. ${dataDzikirPagi[index].perintah}",
-                                    style: TextStyle(fontSize: 30,color: Colors.black87,fontWeight: FontWeight.w600),textAlign: TextAlign.center,
+                              padding: const EdgeInsets.all(20.0),
+                              child: Container(
+                                decoration: BoxDecoration(
+                                  borderRadius: BorderRadius.circular(20),
+                                  image: DecorationImage(
+                                    image: AssetImage("image/u.png"),
+                                    fit: BoxFit.fill,
                                   ),
-                                  SizedBox(
-                                    height: 10,
+                                ),
+                                width: 740,
+                                child: Padding(
+                                  padding: EdgeInsets.all(12),
+                                  child: Padding(
+                                    padding: const EdgeInsets.symmetric(horizontal: 20),
+                                    child: Column(
+                                     
+                                      crossAxisAlignment:
+                                          CrossAxisAlignment.center,
+                                      children: [
+                                        Text(
+                                          "${dataDzikirPagi[index].no}. ${dataDzikirPagi[index].perintah}",
+                                          style: TextStyle(
+                                              fontSize: 30,
+                                              color: Colors.black87,
+                                              fontWeight: FontWeight.w600),
+                                          textAlign: TextAlign.center,
+                                        ),
+                                       
+                                        Padding(
+                                          padding: const EdgeInsets.symmetric(horizontal: 17),
+                                          child: Text(
+                                            dataDzikirPagi[index].arab,
+                                            style: TextStyle(
+                                                fontSize: 40,
+                                                color: Colors.black87,
+                                                fontFamily: "Noto_Naskh_Arabic"),
+                                            textAlign: TextAlign.center,
+                                          ),
+                                        ),
+                                        Text(
+                                          dataDzikirPagi[index].latin,
+                                          style: TextStyle(
+                                              fontSize: 25,
+                                              color: Colors.black87),
+                                          textAlign: TextAlign.center,
+                                        ),
+                                        
+                                        Text(
+                                          dataDzikirPagi[index].arti,
+                                          style: TextStyle(
+                                              fontSize: 20,
+                                              color: Colors.black87),
+                                          textAlign: TextAlign.center,
+                                        ),
+                                        SizedBox(
+                                          height: 40,
+                                        ),
+                                        Text(
+                                          "${dataDzikirPagi[index].faedah}",
+                                          style: TextStyle(
+                                              fontSize: 20,
+                                              color: Colors.black87),
+                                        ),
+                                      ],
+                                    ),
                                   ),
-                                  Text(
-                                    dataDzikirPagi[index].arab,
-                                    style: TextStyle(fontSize: 40,color: Colors.black87,fontFamily:"Noto_Naskh_Arabic"),
-                                    textAlign: TextAlign.center,
-                                  ),
-                                  Text(
-                                    dataDzikirPagi[index].latin,
-                                    style: TextStyle(fontSize: 25,color: Colors.black87),
-                                    textAlign: TextAlign.center,
-                                  ),
-                                  SizedBox(
-                                    height: 40,
-                                  ),
-                                  Text(
-                                    dataDzikirPagi[index].arti,
-                                    style: TextStyle(fontSize: 20,color: Colors.black87),
-                                    textAlign: TextAlign.center,
-                                  ),
-                                  SizedBox(
-                                    height: 40,
-                                  ),
-                                  Text(
-                                    "${dataDzikirPagi[index].faedah}",
-                                    style: TextStyle(fontSize: 20,color: Colors.black87),
-                                  ),
-                                ],
+                                ),
                               ),
                             ),
                           ),
                         ),
-                      ),
-                    ),
-                  );
-                },
-              ),
+                      );
+                    },
+                  ),
+                ),
+              ],
             ),
-          ],
-        ),
-      ),
-    ));
+          ),
+        ));
   }
 }
 

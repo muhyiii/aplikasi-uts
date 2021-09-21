@@ -2,7 +2,7 @@ import 'package:aplikasi_uts/tampilan/dzikir_pagi.dart';
 import 'package:flutter/material.dart';
 
 class DzikirPagi extends StatelessWidget {
-  const DzikirPagi({Key? key}) : super(key: key);
+ 
 
   @override
   Widget build(BuildContext context) {
