@@ -1,5 +1,5 @@
 import 'dart:io';
-
+import 'package:flutter/animation.dart';
 import 'package:aplikasi_uts/DZIKIR-PAGI.dart';
 import 'package:aplikasi_uts/DZIKIR-PETANG.dart';
 import 'package:aplikasi_uts/palatte.dart';
@@ -23,7 +23,7 @@ class Menu extends StatelessWidget {
               child: Column(
                 children: [
                   SizedBox(
-                    height: 10,
+                    height: 150,
                   ),
                   Container(
                     height: 140,
@@ -43,21 +43,23 @@ class Menu extends StatelessWidget {
                     height: 20,
                   ),
                   Container(
-                    
                     decoration: BoxDecoration(
-                      image: DecorationImage(image: NetworkImage("https://media.istockphoto.com/videos/green-crystal-video-id472563747?s=640x640"),fit: BoxFit.cover,),
-                      
+                      image: DecorationImage(
+                        image: NetworkImage(
+                            "https://media.istockphoto.com/videos/green-crystal-video-id472563747?s=640x640"),
+                        fit: BoxFit.cover,
+                      ),
+
                       borderRadius: BorderRadius.only(
-                        bottomRight: Radius.circular(10),
-                            topRight: Radius.circular(10),
-                            bottomLeft: Radius.circular(10),
-                            topLeft: Radius.circular(10),
+                        bottomRight: Radius.circular(30),
+                        topRight: Radius.circular(30),
+                        bottomLeft: Radius.circular(30),
+                        topLeft: Radius.circular(30),
                       ),
                       // gradient: LinearGradient(colors: [
                       //   Colors.lightGreen.shade900,
                       //   Colors.lime.shade900
                       // ]),
-
                     ),
                     height: 600,
                     width: 400,
@@ -74,150 +76,145 @@ class Menu extends StatelessWidget {
 
   Column card(BuildContext context) {
     return Column(
-                    
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    crossAxisAlignment: CrossAxisAlignment.center,
-                    children: [
-                      SizedBox(
-                        height: 30.0,
-                      ),
-                      Container(
-                        decoration: BoxDecoration(
-                            color: Colors.blueAccent,
-                            borderRadius: BorderRadius.circular(16)),
-                        child: RaisedButton(
-                          elevation: 5,
-                           shape: RoundedRectangleBorder(
-                            borderRadius: BorderRadius.only(
-                          bottomRight: Radius.circular(10),
-                          topRight: Radius.circular(10),
-                          bottomLeft: Radius.circular(10),
-                          topLeft: Radius.circular(10),
-                        )),
-                          onPressed: () {
-                            Navigator.push(context,
-                                MaterialPageRoute(builder: (context) {
-                              return TampilanSurat();
-                            }));
-                          },
-                          color: Colors.green[900],
-                          child: Padding(
-                            padding: const EdgeInsets.all(30.0),
-                            child: Text(
-                              "Al -Qur'an",
-                              style: TextStyle(
-                                  color: Colors.white,
-                                  fontSize: 25.0,
-                                  fontFamily: 'LobsterTwo'
-                                  ),
-                            ),
-                          ),
-                        ),
-                      ),
-                      SizedBox(
-                        height: 30.0,
-                      ),
-                      Container(
-                        decoration: BoxDecoration(
-                            color: Colors.blueAccent,
-                            borderRadius: BorderRadius.circular(16)),
-                        child: RaisedButton(
-                           shape: RoundedRectangleBorder(
-                            borderRadius: BorderRadius.only(
-                          bottomRight: Radius.circular(10),
-                          topRight: Radius.circular(10),
-                          bottomLeft: Radius.circular(10),
-                          topLeft: Radius.circular(10),
-                        )),
-                          elevation: 5,
-                          onPressed: () {},
-                          color: Colors.green[900],
-                          child: Padding(
-                            padding: const EdgeInsets.all(30.0),
-                            child: Text(
-                              "Hadist",
-                              style: TextStyle(
-                                  color: Colors.white,
-                                  fontSize: 25.0,
-                                  fontFamily: 'LobsterTwo'),
-                            ),
-                          ),
-                        ),
-                      ),
-                      SizedBox(
-                        height: 30.0,
-                      ),
-                      Container(
-                        decoration: BoxDecoration(
-                            color: Colors.blueAccent,
-                            borderRadius: BorderRadius.circular(16)),
-                        child: RaisedButton(
-                          elevation: 5,
-                           shape: RoundedRectangleBorder(
-                            borderRadius: BorderRadius.only(
-                          bottomRight: Radius.circular(10),
-                          topRight: Radius.circular(10),
-                          bottomLeft: Radius.circular(10),
-                          topLeft: Radius.circular(10),
-                        )),
-                          onPressed: () {
-                            Navigator.push(context,
-                                MaterialPageRoute(builder: (context) {
-                              return DzikirPagi();
-                            }));
-                          },
-                          color: Colors.green[900],
-                          child: Padding(
-                            padding: const EdgeInsets.all(30.0),
-                            child: Text(
-                              "Dzikir pagi",
-                              style: TextStyle(
-                                  color: Colors.white,
-                                  fontSize: 25.0,
-                                  fontFamily: 'LobsterTwo'),
-                            ),
-                          ),
-                        ),
-                      ),
-                      SizedBox(
-                        height: 30.0,
-                      ),
-                      Container(
-                        decoration: BoxDecoration(
-                            color: Colors.blueAccent,
-                            borderRadius: BorderRadius.circular(16)),
-                        child: RaisedButton(
-                          elevation: 5,
-                           shape: RoundedRectangleBorder(
-                            borderRadius: BorderRadius.only(
-                          bottomRight: Radius.circular(10),
-                          topRight: Radius.circular(10),
-                          bottomLeft: Radius.circular(10),
-                          topLeft: Radius.circular(10),
-                        )),
-                          onPressed: () {
-                            Navigator.push(context,
-                                MaterialPageRoute(builder: (context) {
-                              return DzikirPetang();
-                            }));
-                          },
-                          color: Colors.green[900],
-                          child: Padding(
-                            padding: const EdgeInsets.all(30.0),
-                            child: Text(
-                              "Dzikir petang",
-                              style: TextStyle(
-                                  color: Colors.white,
-                                  fontSize: 25.0,
-                                  fontFamily: 'LobsterTwo'),
-                            ),
-                          ),
-                        ),
-                      ),
-                      SizedBox(
-                        height: 40.0,
-                      ),
-                    ],
-                  );
+      mainAxisAlignment: MainAxisAlignment.center,
+      crossAxisAlignment: CrossAxisAlignment.center,
+      children: [
+        SizedBox(
+          height: 30.0,
+        ),
+        Container(
+          decoration: BoxDecoration(
+              gradient: LinearGradient(colors: [Colors.green.shade800,Colors.green.shade600]),
+              borderRadius: BorderRadius.circular(16)),
+          child: RaisedButton(
+            elevation: 8,
+            shape: RoundedRectangleBorder(
+                borderRadius: BorderRadius.only(
+              bottomRight: Radius.circular(800),
+              topRight: Radius.circular(30),
+              bottomLeft: Radius.circular(30),
+              topLeft: Radius.circular(600),
+            )),
+            onPressed: () {
+              Navigator.push(context, MaterialPageRoute(builder: (context) {
+                return TampilanSurat();
+              }));
+            },
+            color: Colors.green[700],
+            child: Padding(
+              padding: const EdgeInsets.all(30.0),
+              child: Text(
+                "Al -Qur'an",
+                style: TextStyle(
+                    color: Colors.white,
+                    fontSize: 25.0,
+                    fontFamily: 'LobsterTwo'),
+              ),
+            ),
+          ),
+        ),
+        SizedBox(
+          height: 30.0,
+        ),
+        Container(
+          decoration: BoxDecoration(
+              gradient: LinearGradient(colors: [Colors.green.shade800,Colors.green.shade600]),
+              borderRadius: BorderRadius.circular(16)),
+          child: RaisedButton(
+            shape: RoundedRectangleBorder(
+                borderRadius: BorderRadius.only(
+              bottomRight: Radius.circular(800),
+              topRight: Radius.circular(30),
+              bottomLeft: Radius.circular(30),
+              topLeft: Radius.circular(600),
+            )),
+            elevation: 5,
+            onPressed: () {},
+            color: Colors.green[700],
+            child: Padding(
+              padding: const EdgeInsets.all(30.0),
+              child: Text(
+                "Hadist",
+                style: TextStyle(
+                    color: Colors.white,
+                    fontSize: 25.0,
+                    fontFamily: 'LobsterTwo'),
+              ),
+            ),
+          ),
+        ),
+        SizedBox(
+          height: 30.0,
+        ),
+        Container(
+          decoration: BoxDecoration(
+              gradient: LinearGradient(colors: [Colors.green.shade800,Colors.green.shade600]),
+              borderRadius: BorderRadius.circular(16)),
+          child: RaisedButton(
+            elevation: 5,
+            shape: RoundedRectangleBorder(
+                borderRadius: BorderRadius.only(
+              bottomRight: Radius.circular(800),
+              topRight: Radius.circular(30),
+              bottomLeft: Radius.circular(30),
+              topLeft: Radius.circular(600),
+            )),
+            onPressed: () {
+              Navigator.push(context, MaterialPageRoute(builder: (context) {
+                return DzikirPagi();
+              }));
+            },
+            color: Colors.green[700],
+            child: Padding(
+              padding: const EdgeInsets.all(30.0),
+              child: Text(
+                "Dzikir pagi",
+                style: TextStyle(
+                    color: Colors.white,
+                    fontSize: 25.0,
+                    fontFamily: 'LobsterTwo'),
+              ),
+            ),
+          ),
+        ),
+        SizedBox(
+          height: 30.0,
+        ),
+        Container(
+          decoration: BoxDecoration(
+              gradient: LinearGradient(colors: [Colors.green.shade800,Colors.green.shade600]),
+              borderRadius: BorderRadius.circular(16)),
+          child: RaisedButton(
+            elevation: 5,
+            shape: RoundedRectangleBorder(
+                borderRadius: BorderRadius.only(
+              bottomRight: Radius.circular(800),
+              topRight: Radius.circular(30),
+              bottomLeft: Radius.circular(30),
+              topLeft: Radius.circular(600),
+            )),
+            onPressed: () {
+              Navigator.push(context, MaterialPageRoute(builder: (context) {
+                return DzikirPetang();
+              }));
+            },
+            color: Colors.green[700],
+            child: Padding(
+              padding: const EdgeInsets.all(30.0),
+              child: Text(
+                "Dzikir petang",
+                style: TextStyle(
+                    color: Colors.white,
+                    fontSize: 25.0,
+                    fontFamily: 'LobsterTwo'),
+              ),
+            ),
+          ),
+        ),
+        SizedBox(
+          height: 40.0,
+        ),
+      ],
+    );
   }
 }
