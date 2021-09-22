@@ -194,4 +194,7 @@ var dataDzikirPagi = [
       arti:
           "“Aku memohon ampun kepada Allah dan bertobat kepada-Nya.” (Dibaca 100 x dalam sehari)",
       faedah: ""),
+
+
+      
 ];

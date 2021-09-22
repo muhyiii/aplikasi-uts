@@ -1,4 +1,4 @@
-import 'package:aplikasi_uts/home.dart';
+// ignore: unused_import
 import 'package:aplikasi_uts/menu.dart';
 import 'package:aplikasi_uts/widget/loading.dart';
 import 'package:flutter/material.dart';
@@ -10,13 +10,11 @@ void main() {
 class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(routes: <String,WidgetBuilder>{
-      '/menu' :(BuildContext context) =>Menu()
-    },
+    return MaterialApp(
       debugShowCheckedModeBanner: false,
       title: "Qur'an Care",
       theme: ThemeData(primarySwatch: Colors.green),
-      home: Home(),
+      home: LoadingPage(),
     );
   }
 }
