@@ -40,7 +40,7 @@ class DzikirPagi extends StatelessWidget {
                                   ]),
                             ),
                             Text(
-                              "Syariat Dzikir Pagi dan Petang",
+                              "Syariat Dzikir Pagi dan Petang",textAlign: TextAlign.center,
                               style: TextStyle(
                                   color: Colors.white,
                                   fontSize: 30,
@@ -130,7 +130,7 @@ class DzikirPagi extends StatelessWidget {
                               height: 40,
                             ),
                             Text(
-                              "Waktu Dzikir Pagi",
+                              "Waktu Dzikir Pagi",textAlign: TextAlign.center,
                               style: TextStyle(
                                   color: Colors.white,
                                   fontSize: 50,

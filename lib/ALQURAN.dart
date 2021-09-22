@@ -40,7 +40,7 @@ class AlquranAlkarim extends StatelessWidget {
                                   ]),
                             ),
                             Text(
-                              "Keutamaan Membaca Al-Qura'an ",
+                              "Keutamaan Membaca Al-Qura'an ",textAlign: TextAlign.center,
                               style: TextStyle(
                                   color: Colors.white,
                                   fontSize: 30,
@@ -187,12 +187,13 @@ class AlquranAlkarim extends StatelessWidget {
                               size: 40,
                             ),
                           ),
-                         
+                        
                           Text(
                             "Al-Qur'an Al-Karim",
                             style:
-                                TextStyle(fontSize: 40, color: Colors.black87),
-                          ),Image.asset('image/Group 3.png')
+                                TextStyle(fontSize: 50,fontFamily: "Righteous", color: Colors.black87),
+                          ),
+                           SizedBox(width: 20,),
                         ],
                       )),
                 ),
@@ -226,7 +227,7 @@ class AlquranAlkarim extends StatelessWidget {
                                     );
                                   },
                                   child: Padding(
-                                    padding: const EdgeInsets.only(),
+                                    padding: const EdgeInsets.only(top: 3),
                                     child: Container(
                                       height: 110,
                                       decoration: BoxDecoration(
