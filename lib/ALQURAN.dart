@@ -18,7 +18,7 @@ class AlquranAlkarim extends StatelessWidget {
               decoration: BoxDecoration(
                   image: DecorationImage(
                       image: AssetImage('image/alquran.jpg'),
-                      fit: BoxFit.cover)),
+                      fit: BoxFit.fill)),
               child: Column(
                 children: [
                   Expanded(child: SizedBox()),

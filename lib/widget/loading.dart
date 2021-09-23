@@ -23,7 +23,7 @@ class _LoadingPageState extends State<LoadingPage> {
 
 
   startLoadingPage()async{
-    var duration = const Duration(seconds: 2);
+    var duration = const Duration(seconds: 4);
     return Timer(duration, (){
       Navigator.of(context).pushReplacement(MaterialPageRoute(builder: (_){
         return Menu();

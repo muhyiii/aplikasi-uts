@@ -7,7 +7,8 @@ class TampilanAyat extends StatelessWidget {
   TampilanAyat({required this.ayat});
 
   @override
-  Widget build(BuildContext context) { Size size = MediaQuery.of(context).size;
+  Widget build(BuildContext context) {
+    Size size = MediaQuery.of(context).size;
     return Scaffold(
         body: SafeArea(
             child: Container(
@@ -18,11 +19,11 @@ class TampilanAyat extends StatelessWidget {
           Expanded(
             flex: 1,
             child: Padding(
-              padding: const EdgeInsets.all(5.0),
+              padding: const EdgeInsets.all(4.0),
               child: Container(
                 decoration: BoxDecoration(
-                    color: Colors.green,
-                    ),
+                  color: Colors.green,
+                ),
                 child: Padding(
                   padding: const EdgeInsets.symmetric(horizontal: 8.0),
                   child: Row(
@@ -36,11 +37,11 @@ class TampilanAyat extends StatelessWidget {
                             },
                             icon: Icon(
                               Icons.arrow_back,
-                              size: 20,
+                              size: 30,
                             )),
                       ),
                       Expanded(
-                        flex: 113,
+                        flex: 10,
                         child: Padding(
                           padding: const EdgeInsets.all(3.0),
                           child: Container(
@@ -49,11 +50,12 @@ class TampilanAyat extends StatelessWidget {
                               children: [
                                 Text(
                                   ayat.surat_name,
-                                  style: TextStyle(fontSize: 19,fontFamily: "Lobster",),
-                                  
+                                  style: TextStyle(
+                                    fontSize: 19,
+                                    fontFamily: "Lobster",
+                                  ),
                                 ),
                                 Text("${ayat.count_ayat} Ayat")
-                                
                               ],
                             ),
                           ),
@@ -82,12 +84,22 @@ class TampilanAyat extends StatelessWidget {
                             child: Column(
                               children: [
                                 Padding(
-                                  padding:  EdgeInsets.symmetric(horizontal: size.width*0.01),
-                                  child: Container(padding:const EdgeInsets.symmetric(horizontal: 10), 
-                                    child: Text(
-                                      ayat.ayat[index].aya_text,
-                                      style: TextStyle(fontSize: size.height*0.05),textAlign: TextAlign.right,
-                                      
+                                  padding: EdgeInsets.symmetric(
+                                      horizontal: size.width * 0.01),
+                                  child: Container(
+                                    padding: const EdgeInsets.symmetric(
+                                        horizontal: 0),
+                                    alignment: Alignment.topRight,width: size.width*1,
+                                    child: SafeArea(
+                                      child: Padding(
+                                        padding: const EdgeInsets.all(8.0),
+                                        child: Text(
+                                          ayat.ayat[index].aya_text,
+                                          style: TextStyle(
+                                              fontSize: size.height * 0.05),
+                                          textAlign: TextAlign.right,
+                                        ),
+                                      ),
                                     ),
                                   ),
                                 ),
@@ -95,7 +107,8 @@ class TampilanAyat extends StatelessWidget {
                                     alignment: Alignment.centerLeft,
                                     child: Text(
                                       ayat.ayat[index].translation_aya_text,
-                                      style: TextStyle(fontSize: size.height*0.02),
+                                      style: TextStyle(
+                                          fontSize: size.height * 0.02),
                                       textAlign: TextAlign.left,
                                     )),
                               ],

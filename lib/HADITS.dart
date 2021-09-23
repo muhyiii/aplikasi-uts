@@ -50,6 +50,8 @@ class HaditsArbain extends StatelessWidget {
                                         blurRadius: 10,
                                         color: Colors.black12)
                                   ]),
+                            ), SizedBox(
+                              height: size.height * 0.1,
                             ),
                             InkWell(
                               onTap: () {
