@@ -4,7 +4,7 @@ import 'package:flutter/material.dart';
 
 class TampilanHadits extends StatelessWidget {
   @override
-  Widget build(BuildContext context) {
+  Widget build(BuildContext context) { Size size = MediaQuery.of(context).size;
     return SafeArea(
       child: Container(
         color: Colors.white,
@@ -23,16 +23,16 @@ class TampilanHadits extends StatelessWidget {
                       child: Center(
                           child: Row(mainAxisAlignment: MainAxisAlignment.spaceBetween  ,
                         children: [
-                          Expanded(flex: 2,
+                          Expanded(flex: 1,
                             child: IconButton(
                                 onPressed: () {
                                   Navigator.pop(context);
                                 },
-                                icon: Icon(Icons.arrow_back),iconSize: 40),
+                                icon: Icon(Icons.arrow_back),iconSize:  size.width*0.07),
                           ),
                           Expanded(
-                            flex: 8,
-                            child: Text("Hadits Arbain An-Nawawi",style: TextStyle(fontSize: 35),)),
+                            flex:7,
+                            child: Text("Hadits Arbain An-Nawawi",style: TextStyle(fontSize: size.width*0.07),)),
                         ],
                       )),
                     ),
@@ -42,17 +42,17 @@ class TampilanHadits extends StatelessWidget {
               Expanded(
                 flex: 17,
                 child: Padding(
-                  padding: const EdgeInsets.all(20.0),
+                  padding:  EdgeInsets.all(size.width*0.02),
                   child: Container(
                     decoration:
                         BoxDecoration(borderRadius: BorderRadius.circular(100)),
                     child: GridView.builder(
-                        padding: EdgeInsets.all(10),
+                        padding: EdgeInsets.all(2),
                         gridDelegate: SliverGridDelegateWithMaxCrossAxisExtent(
-                            maxCrossAxisExtent: 500,
-                            childAspectRatio: 4 / 2,
-                            crossAxisSpacing: 20,
-                            mainAxisSpacing: 20),
+                            maxCrossAxisExtent: 200,
+                            childAspectRatio: 4/ 2,
+                            crossAxisSpacing: 10,
+                            mainAxisSpacing: 10),
                         itemCount: dataHadits.length,
                         itemBuilder: (context, index) {
                           final Hadits dalil = dataHadits[index];
@@ -72,7 +72,7 @@ class TampilanHadits extends StatelessWidget {
                                       );
                                     },
                                     child: Container(
-                                        padding: EdgeInsets.all(10),
+                                        padding: EdgeInsets.all(size.height*0.01),
                                         alignment: Alignment.center,
                                         decoration: BoxDecoration(
                                             image: DecorationImage(
@@ -87,11 +87,11 @@ class TampilanHadits extends StatelessWidget {
                                             Text(
                                               "Hadits  ${dataHadits[index].no}",
                                               textAlign: TextAlign.center,
-                                              style: TextStyle(fontSize: 30),
+                                              style: TextStyle(fontSize: size.height*0.028),
                                             ),
                                             Text(
                                               dalil.judul,
-                                              style: TextStyle(fontSize: 20),
+                                              style: TextStyle(fontSize: size.height*0.016),
                                               textAlign: TextAlign.center,
                                             ),
                                           ],

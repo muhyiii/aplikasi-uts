@@ -7,7 +7,7 @@ class TampilanAyat extends StatelessWidget {
   TampilanAyat({required this.ayat});
 
   @override
-  Widget build(BuildContext context) {
+  Widget build(BuildContext context) { Size size = MediaQuery.of(context).size;
     return Scaffold(
         body: SafeArea(
             child: Container(
@@ -80,11 +80,11 @@ class TampilanAyat extends StatelessWidget {
                             child: Column(
                               children: [
                                 Padding(
-                                  padding: const EdgeInsets.symmetric(horizontal: 20),
-                                  child: Container(alignment: Alignment.topRight,
+                                  padding:  EdgeInsets.symmetric(horizontal: size.width*0.01),
+                                  child: Container(padding:const EdgeInsets.symmetric(horizontal: 10), 
                                     child: Text(
                                       ayat.ayat[index].aya_text,
-                                      style: TextStyle(fontSize: 40),textAlign: TextAlign.right,
+                                      style: TextStyle(fontSize: size.height*0.05),textAlign: TextAlign.right,
                                       
                                     ),
                                   ),
@@ -93,7 +93,7 @@ class TampilanAyat extends StatelessWidget {
                                     alignment: Alignment.centerLeft,
                                     child: Text(
                                       ayat.ayat[index].translation_aya_text,
-                                      style: TextStyle(fontSize: 18),
+                                      style: TextStyle(fontSize: size.height*0.02),
                                       textAlign: TextAlign.left,
                                     )),
                               ],

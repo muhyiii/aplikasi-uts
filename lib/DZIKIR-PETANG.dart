@@ -35,7 +35,7 @@ class DzikirPetang extends StatelessWidget {
                                   'Dzikir Petang',
                                   style: TextStyle(
                                       color: Colors.white,
-                                      fontSize: size.height *0.05,
+                                      fontSize: size.height * 0.05,
                                       shadows: [
                                         Shadow(
                                             blurRadius: 10,
@@ -47,7 +47,7 @@ class DzikirPetang extends StatelessWidget {
                                   textAlign: TextAlign.center,
                                   style: TextStyle(
                                       color: Colors.white,
-                                      fontSize: size.height *0.03,
+                                      fontSize: size.height * 0.03,
                                       shadows: [
                                         Shadow(
                                             blurRadius: 10,
@@ -62,7 +62,7 @@ class DzikirPetang extends StatelessWidget {
                                   textAlign: TextAlign.center,
                                   style: TextStyle(
                                       color: Colors.white,
-                                      fontSize: size.height *0.02,
+                                      fontSize: size.height * 0.02,
                                       shadows: [
                                         Shadow(
                                             blurRadius: 10,
@@ -76,7 +76,7 @@ class DzikirPetang extends StatelessWidget {
                                   "Allah Ta’ala berfirman,",
                                   style: TextStyle(
                                       color: Colors.white,
-                                      fontSize: size.height *0.03,
+                                      fontSize: size.height * 0.03,
                                       shadows: [
                                         Shadow(
                                             blurRadius: 10,
@@ -103,7 +103,7 @@ class DzikirPetang extends StatelessWidget {
                                   textAlign: TextAlign.center,
                                   style: TextStyle(
                                       color: Colors.white,
-                                      fontSize: size.height *0.02,
+                                      fontSize: size.height * 0.02,
                                       shadows: [
                                         Shadow(
                                             blurRadius: 10,
@@ -111,19 +111,26 @@ class DzikirPetang extends StatelessWidget {
                                       ]),
                                 ),
                                 SizedBox(
-                              height: size.height * 0.1,
-                            ),
-                            InkWell(onTap: (){
-                              Navigator.pushReplacement(context, MaterialPageRoute(builder: (BuildContext context)=>TampilanDzikirPetang()));
-                            },
-                              child: Container(
-                                  height: size.height * 0.06,width: size.width*0.4,
-                                  decoration: BoxDecoration(
-                                      color: Colors.green,
-                                      borderRadius: BorderRadius.circular(
-                                          size.height * 0.1)),
-                                  child: Center(child: Text('Baca Dzikir Petang'))),
-                            ),
+                                  height: size.height * 0.1,
+                                ),
+                                InkWell(
+                                  onTap: () {
+                                    Navigator.pushReplacement(
+                                        context,
+                                        MaterialPageRoute(
+                                            builder: (BuildContext context) =>
+                                                TampilanDzikirPetang()));
+                                  },
+                                  child: Container(
+                                      height: size.height * 0.06,
+                                      width: size.width * 0.4,
+                                      decoration: BoxDecoration(
+                                          color: Colors.green,
+                                          borderRadius: BorderRadius.circular(
+                                              size.height * 0.1)),
+                                      child: Center(
+                                          child: Text('Baca Dzikir Petang'))),
+                                ),
                               ]),
                             ))),
                   ),
