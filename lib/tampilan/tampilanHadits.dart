@@ -13,27 +13,29 @@ class TampilanHadits extends StatelessWidget {
         child: Scaffold(
           body: Column(
             children: [
-              Expanded(
+              Expanded(flex: 2,
                 child: Scaffold(
-                  body: Container(
-                    height: (MediaQuery.of(context).size.height),
-                    width: (MediaQuery.of(context).size.width),
-                    color: Colors.green,
-                    child: Center(
-                        child: Row(mainAxisAlignment: MainAxisAlignment.spaceBetween  ,
-                      children: [
-                        Expanded(flex: 2,
-                          child: IconButton(
-                              onPressed: () {
-                                Navigator.pop(context);
-                              },
-                              icon: Icon(Icons.arrow_back),iconSize: 30),
-                        ),
-                        Expanded(
-                          flex: 7,
-                          child: Text("Hadits Arbain An-Nawawi",style: TextStyle(fontSize: 30),)),
-                      ],
-                    )),
+                  body: Container(height: 200,
+                    child: Container(
+                      height: (MediaQuery.of(context).size.height),
+                      width: (MediaQuery.of(context).size.width),
+                      color: Colors.green,
+                      child: Center(
+                          child: Row(mainAxisAlignment: MainAxisAlignment.spaceBetween  ,
+                        children: [
+                          Expanded(flex: 2,
+                            child: IconButton(
+                                onPressed: () {
+                                  Navigator.pop(context);
+                                },
+                                icon: Icon(Icons.arrow_back),iconSize: 40),
+                          ),
+                          Expanded(
+                            flex: 8,
+                            child: Text("Hadits Arbain An-Nawawi",style: TextStyle(fontSize: 35),)),
+                        ],
+                      )),
+                    ),
                   ),
                 ),
               ),

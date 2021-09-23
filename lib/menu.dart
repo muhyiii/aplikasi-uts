@@ -1,6 +1,7 @@
 import 'package:aplikasi_uts/ALQURAN.dart';
 import 'package:aplikasi_uts/DZIKIR-PAGI.dart';
 import 'package:aplikasi_uts/DZIKIR-PETANG.dart';
+import 'package:aplikasi_uts/HADITS.dart';
 import 'package:aplikasi_uts/tampilan/tampilanHadits.dart';
 
 import 'package:flutter/material.dart';
@@ -9,8 +10,9 @@ class Menu extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return SafeArea(
-      child: Container(decoration: BoxDecoration(
-        image:DecorationImage(image:  AssetImage("image/wm.png"))
+      child: Container( height: (MediaQuery.of(context).size.height),
+            width: (MediaQuery.of(context).size.width),decoration: BoxDecoration(
+        image:DecorationImage(image:  AssetImage("image/wm.png"), fit: BoxFit.fill,)
       ),
         child: Scaffold(
           backgroundColor: Colors.transparent,
@@ -26,7 +28,7 @@ class Menu extends StatelessWidget {
                     borderRadius: BorderRadius.circular(20),
                     image: DecorationImage(
                       image: AssetImage("image/u.png"),
-                      fit: BoxFit.cover,
+                      fit: BoxFit.fill,
                     ),
                   ),
                   child: Container(alignment: Alignment.center,
@@ -103,7 +105,7 @@ class Menu extends StatelessWidget {
                   elevation: 5,
                   onPressed: () {
                     Navigator.push(context, MaterialPageRoute(builder: (context) {
-                      return TampilanHadits();
+                      return HaditsArbain();
                     }));
                   },
                   color: Colors.green[700],

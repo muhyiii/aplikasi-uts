@@ -18,7 +18,7 @@ class _LoadingPageState extends State<LoadingPage> {
   void initState() {
  
     super.initState();
-    // startLoadingPage();
+    startLoadingPage();
   }
 
 
@@ -37,7 +37,7 @@ class _LoadingPageState extends State<LoadingPage> {
       child: Container(
          height: (MediaQuery.of(context).size.height),
             width: (MediaQuery.of(context).size.width),
-        child: Container(decoration: BoxDecoration(image: DecorationImage(image: AssetImage("image/uts.png"))),
+        child: Container(decoration: BoxDecoration(image: DecorationImage(image: AssetImage("image/uts.png"), fit: BoxFit.fill,)),
           child: Scaffold(
             backgroundColor: Colors.transparent,
             body: SafeArea(
@@ -64,7 +64,7 @@ class _LoadingPageState extends State<LoadingPage> {
                    Expanded(flex: 5,
                      child: Container(
                        child: Image.asset(
-                                    "image/Frame1.png",
+                                    "image/Frame1.png",fit: BoxFit.contain,
                                   ),
                      ),
                    ),
