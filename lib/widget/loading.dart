@@ -33,6 +33,7 @@ class _LoadingPageState extends State<LoadingPage> {
 
   @override
  Widget build(BuildContext context) {
+   Size size = MediaQuery.of(context).size;
     return SafeArea(
       child: Container(
          height: (MediaQuery.of(context).size.height),
@@ -53,7 +54,7 @@ class _LoadingPageState extends State<LoadingPage> {
                           textDirection: TextDirection.ltr,
                           style: TextStyle(
                               decoration: TextDecoration.none,
-                              fontSize: 90,
+                              fontSize: size.height*0.1,
                               fontFamily: 'Lobster',
                               color: Colors.white70),
                         ),

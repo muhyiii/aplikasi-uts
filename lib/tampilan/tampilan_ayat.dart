@@ -18,11 +18,11 @@ class TampilanAyat extends StatelessWidget {
           Expanded(
             flex: 1,
             child: Padding(
-              padding: const EdgeInsets.all(8.0),
+              padding: const EdgeInsets.all(5.0),
               child: Container(
                 decoration: BoxDecoration(
                     color: Colors.green,
-                    borderRadius: BorderRadius.circular(20)),
+                    ),
                 child: Padding(
                   padding: const EdgeInsets.symmetric(horizontal: 8.0),
                   child: Row(
@@ -36,11 +36,11 @@ class TampilanAyat extends StatelessWidget {
                             },
                             icon: Icon(
                               Icons.arrow_back,
-                              size: 40,
+                              size: 20,
                             )),
                       ),
                       Expanded(
-                        flex: 4,
+                        flex: 113,
                         child: Padding(
                           padding: const EdgeInsets.all(3.0),
                           child: Container(
@@ -49,9 +49,11 @@ class TampilanAyat extends StatelessWidget {
                               children: [
                                 Text(
                                   ayat.surat_name,
-                                  style: TextStyle(fontSize: 54),
+                                  style: TextStyle(fontSize: 19,fontFamily: "Lobster",),
+                                  
                                 ),
                                 Text("${ayat.count_ayat} Ayat")
+                                
                               ],
                             ),
                           ),
