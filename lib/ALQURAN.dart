@@ -4,20 +4,20 @@ import 'package:aplikasi_uts/tampilan/tampilan_ayat.dart';
 import 'package:flutter/material.dart';
 
 class AlquranAlkarim extends StatelessWidget {
-  
-
   @override
   Widget build(BuildContext context) {
+    Size size = MediaQuery.of(context).size;
     return SafeArea(
       child: Scaffold(
         body: Container(
-           height: (MediaQuery.of(context).size.height),
+          height: (MediaQuery.of(context).size.height),
           width: (MediaQuery.of(context).size.width),
           child: PageView(scrollDirection: Axis.vertical, children: [
             Container(
                 decoration: BoxDecoration(
                     image: DecorationImage(
-                        image: AssetImage('image/alquran.jpg'), fit: BoxFit.cover)),
+                        image: AssetImage('image/alquran.jpg'),
+                        fit: BoxFit.cover)),
                 child: Container(
                     padding:
                         EdgeInsets.symmetric(horizontal: 100, vertical: 230),
@@ -40,7 +40,8 @@ class AlquranAlkarim extends StatelessWidget {
                                   ]),
                             ),
                             Text(
-                              "Keutamaan Membaca Al-Qura'an ",textAlign: TextAlign.center,
+                              "Keutamaan Membaca Al-Qura'an ",
+                              textAlign: TextAlign.center,
                               style: TextStyle(
                                   color: Colors.white,
                                   fontSize: 30,
@@ -67,7 +68,8 @@ class AlquranAlkarim extends StatelessWidget {
                               height: 15,
                             ),
                             Text(
-                              "Rasulullah shallallahu alaihi wa sallam bersabda,",textAlign: TextAlign.center,
+                              "Rasulullah shallallahu alaihi wa sallam bersabda,",
+                              textAlign: TextAlign.center,
                               style: TextStyle(
                                   color: Colors.white,
                                   fontSize: 25,
@@ -80,7 +82,7 @@ class AlquranAlkarim extends StatelessWidget {
                               height: 5,
                             ),
                             Text(
-                            "اقْرَءُوا الْقُرْآنَ فَإِنَّهُ يَأْتِى يَوْمَ الْقِيَامَةِ شَفِيعًا لأَصْحَابِهِ",
+                              "اقْرَءُوا الْقُرْآنَ فَإِنَّهُ يَأْتِى يَوْمَ الْقِيَامَةِ شَفِيعًا لأَصْحَابِهِ",
                               textAlign: TextAlign.center,
                               style: TextStyle(
                                   color: Colors.white,
@@ -103,8 +105,10 @@ class AlquranAlkarim extends StatelessWidget {
                             ),
                             SizedBox(
                               height: 10,
-                            ),Text(
-                              "Dan juga sabda Beliau,",textAlign: TextAlign.center,
+                            ),
+                            Text(
+                              "Dan juga sabda Beliau,",
+                              textAlign: TextAlign.center,
                               style: TextStyle(
                                   color: Colors.white,
                                   fontSize: 25,
@@ -140,7 +144,6 @@ class AlquranAlkarim extends StatelessWidget {
                             ),
                             Text(
                               "Oleh karena itu marilah kita membaca Al-Qur'an sebanyak-banyaknya agar kita mendapat pahala dan juga syafa'at dari Al-Qur'an, semoga Allah bisa mengistiqomahkan kita dalam Membaca Al-Qur'an. Aaamiin.",
-                              
                               textAlign: TextAlign.center,
                               style: TextStyle(
                                   color: Colors.white,
@@ -150,155 +153,163 @@ class AlquranAlkarim extends StatelessWidget {
                                         blurRadius: 10, color: Colors.black12)
                                   ]),
                             ),
-                           
-                         
                           ]),
                         )))),
-           Container(
-          padding: EdgeInsets.all(0),
-          decoration: BoxDecoration(
-            border: Border.all(width: 5, color: Colors.grey),
-          ),
-            height: (MediaQuery.of(context).size.height),
-            width: (MediaQuery.of(context).size.width),
-          child: Column(
-            children: [
-              Expanded(
-                flex: 2,
-                child: Scaffold(
-                  body: Container(
-                      decoration: BoxDecoration(
-                          image: DecorationImage(
-                              image: AssetImage("image/u.png"),
-                              fit: BoxFit.fill)),
-                      height: 120,
-                      child: Row(mainAxisAlignment: MainAxisAlignment.spaceAround,
-                        children: [
-                        
-                          IconButton(
-                            onPressed: () {
-                              Navigator.push(context,
-                                  MaterialPageRoute(builder: (context) {
-                                return Menu();
-                              }));
-                            },
-                            icon: Icon(
-                              Icons.arrow_back,
-                              size: 40,
-                            ),
-                          ),
-                        
-                          Text(
-                            "Al-Qur'an Al-Karim",
-                            style:
-                                TextStyle(fontSize: 50,fontFamily: "Righteous", color: Colors.black87),
-                          ),
-                           SizedBox(width: 20,),
-                        ],
-                      )),
-                ),
+            Container(
+              padding: EdgeInsets.all(0),
+              decoration: BoxDecoration(
+                border: Border.all(width: 2, color: Colors.green.shade600),
+                
               ),
-              Expanded(
-                flex: 22,
-                child: Scaffold(
-                  body: Container(
-                    decoration: BoxDecoration(
-                        image: DecorationImage(
-                            image: AssetImage("image/u.png"),
-                            fit: BoxFit.fill)),
-                    child: SafeArea(
-                      child: Padding(
-                        padding: const EdgeInsets.only(
-                            left: 8, right: 8, bottom: 20),
-                        child: Container(
-                          child: ListView.builder(
-                            itemCount: dataAlQuran.length,
-                            itemBuilder: (context, index) {
-                              final AlQuran place = dataAlQuran[index];
-                              return InkWell(
-                                  onTap: () {
-                                    Navigator.push(
-                                      context,
-                                      MaterialPageRoute(
-                                        builder: (context) {
-                                          return TampilanAyat(ayat: place);
-                                        },
-                                      ),
-                                    );
-                                  },
-                                  child: Padding(
-                                    padding: const EdgeInsets.only(top: 3),
-                                    child: Container(
-                                      height: 110,
-                                      decoration: BoxDecoration(
-                                          color: Colors.black87,
-                                          border: Border.all(
-                                              width: 2, color: Colors.grey),
-                                          borderRadius:
-                                              BorderRadius.circular(15)),
+              height: (MediaQuery.of(context).size.height),
+              width: (MediaQuery.of(context).size.width),
+              child: Column(
+                children: [
+                  Expanded(
+                    flex: 2,
+                    child: Scaffold(
+                      body: Container(
+                          decoration: BoxDecoration(
+                              borderRadius: BorderRadius.circular(2),
+                              // color: Colors.green.shade700
+                              image: DecorationImage(
+                                  image: AssetImage("image/u.png"),
+                                  
+                                  colorFilter: const ColorFilter.mode(
+                                    Colors.blueGrey,
+                                    BlendMode.modulate,
+                                  ),
+                                  fit: BoxFit.fill)
+                                  ),
+                          height: 120,
+                          child: Row(
+                            mainAxisAlignment: MainAxisAlignment.spaceAround,
+                            children: [
+                              IconButton(
+                                onPressed: () {
+                                  Navigator.push(context,
+                                      MaterialPageRoute(builder: (context) {
+                                    return Menu();
+                                  }));
+                                },
+                                icon: Icon(
+                                  Icons.arrow_back,
+                                  size: 23,
+                                  color: Colors.white60,
+                                ),
+                              ),
+                              Text(
+                                "Al-Qur'aanulkarim",
+                                style: TextStyle(
+                                    fontSize: size.height*0.05,
+                                    fontFamily: "Lobster",
+                                    color: Colors.white70),
+                              ),
+                              SizedBox(
+                                width: 20,
+                              ),
+                            ],
+                          )),
+                    ),
+                  ),
+                  Expanded(
+                    flex: 22,
+                    child: Scaffold(
+                      body: Container(
+                        decoration: BoxDecoration(
+                            image: DecorationImage(
+                                image: AssetImage("image/u.png"),
+                                fit: BoxFit.fill)),
+                        child: SafeArea(
+                          child: Padding(
+                            padding: const EdgeInsets.only(
+                                left: 8, right: 8, bottom: 20),
+                            child: Container(
+                              child: ListView.builder(
+                                itemCount: dataAlQuran.length,
+                                itemBuilder: (context, index) {
+                                  final AlQuran place = dataAlQuran[index];
+                                  return InkWell(
+                                      onTap: () {
+                                        Navigator.push(
+                                          context,
+                                          MaterialPageRoute(
+                                            builder: (context) {
+                                              return TampilanAyat(ayat: place);
+                                            },
+                                          ),
+                                        );
+                                      },
                                       child: Padding(
-                                        padding: EdgeInsets.only(
-                                            left: 30, right: 20),
-                                        child: Row(
-                                          children: [
-                                            Expanded(
-                                                flex: 1,
-                                                child: Text(
-                                                  "${place.id}",
-                                                  style: TextStyle(
-                                                      fontSize: 30,
-                                                      color: Colors.white),
-                                                )),
-                                            Expanded(
-                                              flex: 5,
-                                              child: Column(
-                                                crossAxisAlignment:
-                                                    CrossAxisAlignment.start,
-                                                mainAxisAlignment:
-                                                    MainAxisAlignment
-                                                        .spaceEvenly,
-                                                children: [
-                                                  Text(
-                                                    place.surat_name,
+                                        padding: const EdgeInsets.only(top: 3),
+                                        child: Container(
+                                          height: 65,
+                                          decoration: BoxDecoration(
+                                              color: Colors.black54,
+                                              border: Border.all(
+                                                  width: 2,
+                                                  color: Colors.black87),
+                                              borderRadius:
+                                                  BorderRadius.circular(15)),
+                                          child: Padding(
+                                            padding: EdgeInsets.only(
+                                                left: 10, right: 20),
+                                            child: Row(
+                                              children: [
+                                               
+                                                Expanded(
+                                                  flex: 8,
+                                                  child: Column(
+                                                    crossAxisAlignment:
+                                                        CrossAxisAlignment
+                                                            .start,
+                                                    mainAxisAlignment:
+                                                        MainAxisAlignment
+                                                            .spaceEvenly,
+                                                    children: [
+                                                      Text(
+                                                        place.surat_name,
+                                                        style: TextStyle(
+                                                            fontSize: size.height*0.03,
+                                                            color:
+                                                                Colors.white),
+                                                      ),
+                                                      Text(
+                                                        "${place.surat_terjemahan} - ${place.count_ayat} Ayat",
+                                                        style: TextStyle(
+                                                            fontSize: size.height*0.02,
+                                                            color:
+                                                                Colors.white),
+                                                      ),
+                                                    ],
+                                                  ),
+                                                ),
+                                                Expanded(
+                                                  flex: 5,
+                                                  child: Text(
+                                                    place.surat_text,
+                                                    textAlign: TextAlign.right,
                                                     style: TextStyle(
-                                                        fontSize: 40,
+                                                        fontSize: size.height*0.04,
                                                         color: Colors.white),
                                                   ),
-                                                  Text(
-                                                    "${place.surat_terjemahan} - ${place.count_ayat} Ayat",
-                                                    style: TextStyle(
-                                                        fontSize: 20,
-                                                        color: Colors.white),
-                                                  ),
-                                                ],
-                                              ),
+                                                )
+                                              ],
                                             ),
-                                            Expanded(
-                                              flex: 3,
-                                              child: Text(
-                                                place.surat_text,
-                                                textAlign: TextAlign.right,
-                                                style: TextStyle(
-                                                    fontSize: 50,
-                                                    color: Colors.white),
-                                              ),
-                                            )
-                                          ],
+                                          ),
                                         ),
-                                      ),
-                                    ),
-                                  ));
-                            },
+                                      ));
+                                },
+                              ),
+                            ),
                           ),
                         ),
                       ),
                     ),
-                  ),
-                ),
-              )
-            ],
-          ),
-        ),
+                  )
+                ],
+              ),
+            ),
           ]),
         ),
       ),

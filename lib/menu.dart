@@ -8,6 +8,7 @@ import 'package:flutter/material.dart';
 class Menu extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
+     Size size = MediaQuery.of(context).size;
     return SafeArea(
       child: Container(decoration: BoxDecoration(
         image:DecorationImage(image:  AssetImage("image/wm.png"))
@@ -16,12 +17,9 @@ class Menu extends StatelessWidget {
           backgroundColor: Colors.transparent,
           body: SafeArea(
             child: Container(
-              child: Padding(
-                padding: const EdgeInsets.symmetric(
-                    vertical: 210, horizontal: 100),
+              padding: EdgeInsets.symmetric(horizontal: size.width *0.13,vertical: size.height *0.25),
                 child: Container(
-                  height: (MediaQuery.of(context).size.height),
-                  width: (MediaQuery.of(context).size.width),
+                 height: size.height*0.5,
                   decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(20),
                     image: DecorationImage(
@@ -38,12 +36,13 @@ class Menu extends StatelessWidget {
             ),
           ),
         ),
-      ),
-    );
+      );
+    
   }
 
   Container card(BuildContext context) {
-    return Container(height:450,
+     Size size = MediaQuery.of(context).size;
+    return Container(height:700,
       child: Column(mainAxisAlignment: MainAxisAlignment.spaceAround,
         children: [
           Expanded(

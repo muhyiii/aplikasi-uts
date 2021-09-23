@@ -24,7 +24,7 @@ class HaditsArbain extends StatelessWidget {
                       padding: EdgeInsets.all(13),
                       decoration: BoxDecoration(
                           color: Colors.black.withOpacity(0.3),
-                          borderRadius: BorderRadius.all(Radius.circular(30))),
+                          borderRadius: BorderRadius.all(Radius.circular(100))),
                       child: SingleChildScrollView(
                         child: Column(
                           children: [
