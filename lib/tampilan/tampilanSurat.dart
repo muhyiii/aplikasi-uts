@@ -11,7 +11,7 @@ class TampilanSurat extends StatelessWidget {
     return Container(
               padding: EdgeInsets.all(0),
               decoration: BoxDecoration(
-                border: Border.all(width: 5, color: Colors.grey),
+                border: Border.all(width: 5, color: Colors.green.shade700),
               ),
               height: (MediaQuery.of(context).size.height),
               width: (MediaQuery.of(context).size.width),
@@ -33,23 +33,26 @@ class TampilanSurat extends StatelessWidget {
                                 onPressed: () {
                                   Navigator.push(context,
                                       MaterialPageRoute(builder: (context) {
+                                      
                                     return Menu();
                                   }));
                                 },
                                 icon: Icon(
                                   Icons.arrow_back,
-                                  size: 40,
+                                  size: 25,
                                 ),
                               ),
                               Text(
-                                "Al-Qur'an Al-Karim",
+                                
+                                "Al-Qur'annulkarim",
+                                
                                 style: TextStyle(
-                                    fontSize: 50,
-                                    fontFamily: "Righteous",
+                                    fontSize: 35,
+                                    fontFamily: "Lobster",
                                     color: Colors.black87),
                               ),
                               SizedBox(
-                                width: 20,
+                                width: 5,
                               ),
                             ],
                           )),
@@ -86,28 +89,21 @@ class TampilanSurat extends StatelessWidget {
                                       child: Padding(
                                         padding: const EdgeInsets.only(top: 3),
                                         child: Container(
-                                          height: 110,
+                                          height: 85,
                                           decoration: BoxDecoration(
                                               color: Colors.black87,
                                               border: Border.all(
-                                                  width: 2, color: Colors.grey),
+                                                  width: 2, color: Colors.green.shade700),
                                               borderRadius:
                                                   BorderRadius.circular(15)),
                                           child: Padding(
                                             padding: EdgeInsets.only(
-                                                left: 30, right: 20),
+                                                left: 20, right: 20),
                                             child: Row(
                                               children: [
+                                                
                                                 Expanded(
-                                                    flex: 1,
-                                                    child: Text(
-                                                      "${place.id}",
-                                                      style: TextStyle(
-                                                          fontSize: 30,
-                                                          color: Colors.white),
-                                                    )),
-                                                Expanded(
-                                                  flex: 5,
+                                                  flex: 6,
                                                   child: Column(
                                                     crossAxisAlignment:
                                                         CrossAxisAlignment
@@ -119,14 +115,14 @@ class TampilanSurat extends StatelessWidget {
                                                       Text(
                                                         place.surat_name,
                                                         style: TextStyle(
-                                                            fontSize: 40,
+                                                            fontSize: 20,
                                                             color:
                                                                 Colors.white),
                                                       ),
                                                       Text(
                                                         "${place.surat_terjemahan} - ${place.count_ayat} Ayat",
                                                         style: TextStyle(
-                                                            fontSize: 20,
+                                                            fontSize: 11,
                                                             color:
                                                                 Colors.white),
                                                       ),
@@ -134,12 +130,12 @@ class TampilanSurat extends StatelessWidget {
                                                   ),
                                                 ),
                                                 Expanded(
-                                                  flex: 3,
+                                                  flex: 5,
                                                   child: Text(
                                                     place.surat_text,
                                                     textAlign: TextAlign.right,
                                                     style: TextStyle(
-                                                        fontSize: 50,
+                                                        fontSize: 30,
                                                         color: Colors.white),
                                                   ),
                                                 )
