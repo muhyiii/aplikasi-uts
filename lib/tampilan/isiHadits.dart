@@ -68,19 +68,24 @@ class IsiHadits extends StatelessWidget {
                             borderRadius: BorderRadius.circular(10),
                             image: DecorationImage(image: AssetImage('image/u.png'),fit: BoxFit.cover)
                           ),
-                          child: Column(
-                            children: [
-                              Text(
-                                dalils.arab,
-                                textAlign: TextAlign.right,
-                                style: TextStyle(fontSize: 40),
-                              ),
-                              Text(
-                                dalils.arti,
-                                style: TextStyle(fontSize: 25),
-                                textAlign: TextAlign.left,
-                              )
-                            ],
+                          child: Padding(
+                            padding: const EdgeInsets.all(8.0),
+                            child: Column(
+                              children: [
+                                Container(padding: EdgeInsets.symmetric(horizontal: 10),
+                                  child: Text(
+                                    dalils.arab,
+                                    textAlign: TextAlign.right,
+                                    style: TextStyle(fontSize: 40,color: Colors.black87),
+                                  ),
+                                ),
+                                Text(
+                                  dalils.arti,
+                                  style: TextStyle(fontSize: 25,color: Colors.black87),
+                                  textAlign: TextAlign.left,
+                                )
+                              ],
+                            ),
                           ),
                         ),
                       ),

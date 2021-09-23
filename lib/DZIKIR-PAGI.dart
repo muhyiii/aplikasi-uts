@@ -2,48 +2,52 @@ import 'package:aplikasi_uts/tampilan/dzikir_pagi.dart';
 import 'package:flutter/material.dart';
 
 class DzikirPagi extends StatelessWidget {
- 
-
   @override
   Widget build(BuildContext context) {
+    Size size = MediaQuery.of(context).size;
     return SafeArea(
       child: Scaffold(
         body: Container(
-          child: PageView(
-            scrollDirection: Axis.vertical,
-            children: [
-              Container(
-                  height: 100,
-                  decoration: BoxDecoration(
-                      image: DecorationImage(
-                          image: AssetImage("image/pagi.jpg"),
-                          fit: BoxFit.fill)),
-                  child: Container(
-                    padding:
-                        EdgeInsets.symmetric(horizontal: 100, vertical: 230),
+          height: size.height,
+          width: size.width,
+          child: Container(
+              // width: 700,
+              padding: EdgeInsets.symmetric(horizontal: size.width * 0.05),
+              decoration: BoxDecoration(
+                  image: DecorationImage(
+                    
+                      image: AssetImage("image/pagi.jpg"), fit: BoxFit.fill)),
+              child: Column(
+                children: [
+                  Expanded(
+                    child: SizedBox(),
+                  ),
+                  Expanded(
+                    flex: 4 ,
                     child: Container(
-                      padding: EdgeInsets.all(13),
-                      decoration: BoxDecoration(
-                          color: Colors.black.withOpacity(0.3),
-                          borderRadius: BorderRadius.all(Radius.circular(30))),
-                      child: SingleChildScrollView(
+                      child: Container(
+                        padding: EdgeInsets.all(10),
+                        decoration: BoxDecoration(color: Colors.black.withOpacity(0.1),
+                            borderRadius:
+                                BorderRadius.all(Radius.circular(30))),
                         child: Column(
                           children: [
                             Text(
                               'Dzikir Pagi',
                               style: TextStyle(
                                   color: Colors.white,
-                                  fontSize: 50,
+                                  fontSize: size.height * 0.05,
                                   shadows: [
                                     Shadow(
                                         blurRadius: 10, color: Colors.black12)
                                   ]),
                             ),
                             Text(
-                              "Syariat Dzikir Pagi dan Petang",textAlign: TextAlign.center,
+                              "Syariat Dzikir Pagi dan Petang",
+                              textAlign: TextAlign.center,
                               style: TextStyle(
                                   color: Colors.white,
-                                  fontSize: 30,
+                                  fontSize: size.height * 0.03,
                                   shadows: [
                                     Shadow(
                                         blurRadius: 10, color: Colors.black12)
@@ -57,7 +61,7 @@ class DzikirPagi extends StatelessWidget {
                               textAlign: TextAlign.center,
                               style: TextStyle(
                                   color: Colors.white,
-                                  fontSize: 20,
+                                  fontSize: size.height * 0.02,
                                   shadows: [
                                     Shadow(
                                         blurRadius: 10, color: Colors.black12)
@@ -70,7 +74,7 @@ class DzikirPagi extends StatelessWidget {
                               "Allah Ta’ala berfirman,",
                               style: TextStyle(
                                   color: Colors.white,
-                                  fontSize: 25,
+                                  fontSize: size.height * 0.03,
                                   shadows: [
                                     Shadow(
                                         blurRadius: 10, color: Colors.black12)
@@ -84,7 +88,7 @@ class DzikirPagi extends StatelessWidget {
                               textAlign: TextAlign.right,
                               style: TextStyle(
                                   color: Colors.white,
-                                  fontSize: 35,
+                                  fontSize: size.height * 0.03,
                                   shadows: [
                                     Shadow(
                                         blurRadius: 10, color: Colors.black12)
@@ -95,79 +99,33 @@ class DzikirPagi extends StatelessWidget {
                               textAlign: TextAlign.center,
                               style: TextStyle(
                                   color: Colors.white,
-                                  fontSize: 25,
+                                  fontSize: size.height * 0.02,
                                   shadows: [
                                     Shadow(
                                         blurRadius: 10, color: Colors.black12)
                                   ]),
                             ),
                             SizedBox(
-                              height: 10,
+                              height: size.height * 0.1,
                             ),
-                            Text(
-                              "فَاصْبِرْ إِنَّ وَعْدَ اللَّهِ حَقٌّ وَاسْتَغْفِرْ لِذَنْبِكَ وَسَبِّحْ بِحَمْدِ رَبِّكَ بِالْعَشِيِّ وَالْإِبْكَارِ",
-                              textAlign: TextAlign.center,
-                              style: TextStyle(
-                                  color: Colors.white,
-                                  fontSize: 35,
-                                  shadows: [
-                                    Shadow(
-                                        blurRadius: 10, color: Colors.black12)
-                                  ]),
+                            InkWell(onTap: (){
+                              Navigator.pushReplacement(context, MaterialPageRoute(builder: (BuildContext context)=>TampilanDzikirPagi()));
+                            },
+                              child: Container(
+                                  height: size.height * 0.06,width: size.width*0.4,
+                                  decoration: BoxDecoration(
+                                      color: Colors.green,
+                                      borderRadius: BorderRadius.circular(
+                                          size.height * 0.1)),
+                                  child: Center(child: Text('Baca Dzikir Pagi'))),
                             ),
-                            Text(
-                              "“Maka bersabarlah kamu, karena sesungguhnya janji Allah itu benar, dan mohonlah ampunan untuk dosamu dan bertasbihlah seraya memuji Tuhanmu pada waktu sore dan pagi” (QS. Ghafir: 55).",
-                              textAlign: TextAlign.center,
-                              style: TextStyle(
-                                  color: Colors.white,
-                                  fontSize: 25,
-                                  shadows: [
-                                    Shadow(
-                                        blurRadius: 10, color: Colors.black12)
-                                  ]),
-                            ),
-                            SizedBox(
-                              height: 40,
-                            ),
-                            Text(
-                              "Waktu Dzikir Pagi",textAlign: TextAlign.center,
-                              style: TextStyle(
-                                  color: Colors.white,
-                                  fontSize: 50,
-                                  shadows: [
-                                    Shadow(
-                                        blurRadius: 10, color: Colors.black12)
-                                  ]),
-                            ),
-                            SizedBox(
-                              height: 2,
-                            ),
-                            Text(
-                              'Rasulullah shallallahu alaihi wa sallam bersabda,',textAlign: TextAlign.center,
-                              style: TextStyle(
-                                  color: Colors.white,
-                                  fontSize: 25,
-                                  shadows: [Shadow(blurRadius: 4)]),
-                            ),
-                            Text(
-                              "“Aku duduk bersama orang-orang yang berdzikrullah Ta’ala mulai dari (waktu) sholat shubuh hingga terbit matahari lebih aku cintai daripada memerdekakan empat orang budak dari putra Nabi Isma’il.”(HR. Abu Dawud: 3667, dihasankan oleh Syaikh Al-Albani).",
-                              textAlign: TextAlign.center,
-                              style: TextStyle(
-                                  color: Colors.white,
-                                  fontSize: 25,
-                                  shadows: [Shadow(blurRadius: 4)]),
-                            ),
-                            SizedBox(
-                              height: 20,
-                            )
                           ],
                         ),
                       ),
                     ),
-                  )),
-              TampilanDzikirPagi()
-            ],
-          ),
+                  ),
+                ],
+              )),
         ),
       ),
     );

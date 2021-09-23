@@ -23,7 +23,11 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
-  division: ^0.9.0
+  
+<<<<<<< HEAD
+=======
+  
+>>>>>>> 82a40da648c1b9693ef612acf5a2d04ba7e7a7fc
 
   
   
